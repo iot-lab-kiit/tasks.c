@@ -22,6 +22,39 @@
 
 **Please refer to _CONTRIBUTING.md_ for the same.**
 
+**The following problems need solutions as on date 28<sup>th</sup> Sept, 2020**
+
+- Count distinct elements of an array
+- Program to convert string from lower case to upper case
+- Sort a set of strings in ascending alphabetical order
+- Find length of a string without using strlen()
+- String concatenation without using strcat
+- Reverse a String using recursion
+- Program to sort array in ascending order
+- Find largest element of given array
+- Program to find sum of array elements
+- Program to find number of elements in an array
+- Program to find the largest of three numbers using Pointers
+- Program to count vowels and consonants in a String using pointer
+- Program to print String using Pointer
+- Program to swap two numbers using pointers
+- Program to create initialize and access a pointer variable
+- Find the value of nPr for given value of n & r
+- Find the value of nCr for given value of n & r
+- Program to multiply two floating numbers
+- Program to find out Quotient and Remainder
+- Program to find average of two numbers
+- Program to Add Two Matrices Using Multi-dimensional Arrays
+- Program to Multiply Two Matrices Using Multi-dimensional Arrays
+- Program Swap Numbers in Cyclic Order Using Call by Reference
+- Program to Find Largest Number Using Dynamic Memory Allocation
+- Program to Sort Elements in Lexicographical Order (Dictionary Order)
+- Program to Calculate Difference Between Two Time Periods
+- Program to Display its own Source Code as Output
+- Matrix rotation by 90 degrees clockwise and anticlockwise
+- Saddle point coordinates of a given matrix
+- Matrix printing in aspiral form
+
 ---
 
 ## 🏁 Getting Started
