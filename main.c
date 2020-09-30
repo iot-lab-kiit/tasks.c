@@ -55,6 +55,7 @@ void main()
   }
   case 1:
   {
+    Array_distinct();
     break;
   }
   case 2:
