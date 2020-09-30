@@ -76,5 +76,5 @@ If you find any bugs, please create an issue. We will work towards resolving it 
 - [@SahilKr24](https://github.com/SahilKr24)
 - [@RKRohk](https://github.com/Rkrohk)
 
-See also the list of [contributors](https://github.com/iot-lab-kiit/TheNatureFresh-app/contributors)
+See also the list of [contributors](https://github.com/iot-lab-kiit/tasks.c/contributors)
 who participated in this project.
