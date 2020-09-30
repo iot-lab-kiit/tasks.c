@@ -1,20 +1,12 @@
 #include <stdio.h>
-void Array_distinct(){
-    int n,val,M[10000],k=0;
-    printf("\nEnter the size of an array\n");
-    scanf("%d",&n);
-    int A[n];
-    printf("\nEnter the values of an array\n");
+int Array_count_distinct(int A[],int n){
+    int M[10000];
+    int count=0;
     for(int i=0;i<n;i++){
-        scanf("%d",&val);
-        if(M[val]!=1){
-            A[k]=val;
-            M[val]=1;
-            ++k;
+        if(M[A[i]]!=1){
+            M[A[i]]=1;
+            ++count;
         } 
     }
-    printf("Array:\t");
-    for(int i=0;i<k;i++){
-        printf("%d\t",A[i]);
-    }
+    return count;
 }

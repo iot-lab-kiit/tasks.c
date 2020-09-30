@@ -55,7 +55,15 @@ void main()
   }
   case 1:
   {
-    Array_distinct();
+    int n;
+    printf("\nEnter the size of an array\n");
+    scanf("%d",&n);
+    int A[n];
+    printf("\nEnter the values of an array\n");
+    for(int i=0;i<n;i++){
+        scanf("%d",&A[i]);
+    }
+    printf("\nDistinct Elements count: %d\n",Array_count_distinct(A,n));
     break;
   }
   case 2:
