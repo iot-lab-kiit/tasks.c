@@ -83,6 +83,18 @@ void main()
   }
   case 8:
   {
+     int c, array[100], size, location, maximum;
+      printf("Input number of elements in array\n");
+      scanf("%d", &size);
+      printf("Enter %d integers\n", size);
+      for (c = 0; c < size; c++)
+        scanf("%d", &array[c]);
+    // finds the location of the largest number in the array
+      location = find_maximum(array, size);
+    // finds the value of the element in that location from the array
+      maximum  = array[location];
+    //prints the value of the largest element in the array
+      printf("Largest element value = %d.\n", maximum);
     break;
   }
   case 9:
