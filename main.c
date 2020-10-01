@@ -92,6 +92,12 @@ void main()
   }
   case 5:
   {
+   char str1[50], str2[50];
+   printf("\nEnter first string: ");
+   scanf("%s",str1);
+   printf("\nEnter second string: ");
+   scanf("%s",str2);
+   concat_str(str1,str2);
     break;
   }
   case 6:
