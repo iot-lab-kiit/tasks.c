@@ -213,6 +213,12 @@ void main()
   }
   case 20:
   {
+    int n1, n2;
+    printf("Enter first number: ");
+    scanf("%d",&n1);
+    printf("Enter second number: ");
+    scanf("%d",&n2);
+    avg(n1,n2);
     break;
   }
   case 21:
