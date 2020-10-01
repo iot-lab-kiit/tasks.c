@@ -100,6 +100,13 @@ void main()
   }
   case 7:
   {
+    int a[100],n;
+    printf("\nEnter size of the array");
+    scanf("%d",&n);
+    printf("Enter the elements :");
+    for(int i=0;i<=n;i++)
+        scanf("%d",&a[i]);
+    Sort_ele(n,a);
     break;
   }
   case 8:
