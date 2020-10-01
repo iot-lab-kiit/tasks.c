@@ -135,6 +135,12 @@ void main()
   }
   case 16:
   {
+  	int n,r;
+    printf("Enter n:");
+    scanf("%d",&n);
+    printf("Enter r:");
+    scanf("%d",&r);
+    printf("%dP%d=%d\n",n,r,permutation(n,r));
     break;
   }
   case 17:
