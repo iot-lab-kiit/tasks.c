@@ -77,6 +77,20 @@ void main()
   }
   case 3:
   {
+    int n,i;
+    printf("Enter the Number of strings to be entered :- \n");
+    scanf("%d",&n);
+    char arr[n][MAX];
+    for(i = 0 ; i < n ; ++i){
+        scanf("%s",&arr[i]);
+    }
+	  printf("\n");
+	  sortArray(arr, n);
+	  printf("The Strings in Alphabetical order are :- \n");
+	  for (i = 0; i < n; i++){
+		  printf(" %s ",arr[i]);
+	  }
+	  printf("\n");
     break;
   }
   case 4:
