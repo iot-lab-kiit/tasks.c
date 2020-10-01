@@ -198,6 +198,11 @@ void main()
   }
   case 18:
   {
+    float num1,num2,result;
+    printf("Enter the value for num1 and num2");
+    scanf("%f%f",&num1,&num2);
+    result=num1*num2;
+    printf("%f",result);
     break;
   }
   case 19:
