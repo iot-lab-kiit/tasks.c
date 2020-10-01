@@ -188,8 +188,6 @@ void main()
   }
   case 22:
   {
-    void main()
-{
     int r1, c1, r2, c2, s = 0;
     int ar[10][10], arr[10][10], multi[10][10];
 
@@ -233,8 +231,6 @@ void main()
     }
     else
         printf("Product of matrix not possible !");
-}
-
     break;
   }
   case 23:
