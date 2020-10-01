@@ -258,6 +258,7 @@ void main()
   }
   case 31:
       MeanMedian();
+      break;
   default:
     printf("Invalid Input. Try Again!\n");
     break;
