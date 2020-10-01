@@ -74,10 +74,62 @@ void main()
     toUpper(s);
     break;
   }
+
+  //sort a set of string in ascending alphabetical order
+
   case 3:
   {
-    break;
+	 
+	  char str[30][40],temp[30];
+
+	  int num = 0;
+
+	  printf("Input number of strings: ");
+	  
+	  scanf("%d", &num);
+	
+	  getchar();
+
+	  printf("Please Input %d strings :\n", num);
+	
+	  for(int loop = 0;loop < num; loop++)
+	       
+		  gets(str[loop]);
+
+       //Logic for sorting array of strings
+
+     	  for (int outer = 0; outer < num; outer++) {
+	  
+		  for (int inner = outer + 1; inner < num; inner++) {
+
+	      		  if (strcmp(str[outer], str[inner]) > 0) {
+
+				  strcpy(temp, str[outer]);
+
+		  		  strcpy(str[outer], str[inner]);
+
+		  		  strcpy(str[inner], temp);
+            
+			  }
+        
+		  }
+
+	  }
+
+       	  // print the strings after sort
+
+	  printf("The Strings after Sorting:\n");
+
+	  for(int loop = 0; loop < num; loop++) {
+ 
+		  printf("%s\n",str[loop]);
+
+	  }
+
+	  break;
+
   }
+
   case 4:
   {
     char input_str[50];
@@ -118,7 +170,9 @@ void main()
     for(i=0;i<n;i++)
         scanf("%d",&a[i]);
     largest(a,n);
-    return 0;
+
+    //this line is no longer required and hence commented
+    //return 0;
     break;
   }
   case 9:
