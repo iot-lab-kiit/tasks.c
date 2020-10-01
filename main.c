@@ -276,6 +276,23 @@ void main()
   }
   case 21:
   {
+  	int r,c;
+  	printf("Enter number of rows and column for the matrices: \n");
+        scanf("%d%d", &r, &c);
+	int mat1[r][c],mat2[r][c],i,j;
+  	printf("Enter the elements of the first matrix: \n");
+  	for(i=0;i<r;i++){
+  		for(j=0;j<c;j++){
+  			scanf("%d",&mat1[i][j]);
+		  }
+	}
+  	printf("Enter the elements of the second matrix: \n");
+	for(i=0;i<r;i++){
+  		for(j=0;j<c;j++){
+  			scanf("%d",&mat2[i][j]);
+		  }
+	}
+	addMultidimentionalArray((int *)mat1,(int *)mat2,r,c);
     break;
   }
   case 22:
