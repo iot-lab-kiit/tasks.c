@@ -96,9 +96,12 @@ void main()
   }
   case 6:
   {
-    printf("Enter a string: ");
-    revString();
-    return 0;
+    char f[100];
+    printf("Enter a string :- ");
+    gets(f);
+    printf("The reverse of the string is :- ");
+    rev(f, 0, strlen(f)-1);
+    printf("%s\n", f);
     break;
   }
   case 7:
