@@ -215,6 +215,10 @@ void main()
   }
   case 15:
   {
+    int num;  
+    printf("Enter a number:");
+    scanf("%d",&num);
+    accessPtr(num);
     break;
   }
   case 16:
