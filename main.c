@@ -111,6 +111,14 @@ void main()
   }
   case 8:
   {
+    int a[100],n,i;
+    printf("Enter the size of the array: ");
+    scanf("%d",&n);
+    printf("Enter %d elements :",n);
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    largest(a,n);
+    return 0;
     break;
   }
   case 9:
