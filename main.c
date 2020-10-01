@@ -341,6 +341,7 @@ void main()
   }
   case 27:
   {
+    PrintSource("main.c");
     break;
   }
   case 28:
