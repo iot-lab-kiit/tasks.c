@@ -55,10 +55,23 @@ void main()
   }
   case 1:
   {
+    int n;
+    printf("\nEnter the size of an array\n");
+    scanf("%d",&n);
+    int A[n];
+    printf("\nEnter the values of an array\n");
+    for(int i=0;i<n;i++){
+        scanf("%d",&A[i]);
+    }
+    printf("\nDistinct Elements count: %d\n",Array_count_distinct(A,n));
     break;
   }
   case 2:
   {
+    char s[100];
+    printf("\nEnter a string : ");
+    scanf("\n%[^\n]%*c", s);
+    toUpper(s);
     break;
   }
   case 3:
@@ -67,6 +80,14 @@ void main()
   }
   case 4:
   {
+    char input_str[50];
+    int length;
+    printf("\n Enter any string\n");
+    gets(input_str);
+    puts(input_str);
+    length = length_of_string(input_str);
+    printf("\n The length of the input string is  : %d\n",length);
+    
     break;
   }
   case 5:
@@ -79,26 +100,37 @@ void main()
   }
   case 7:
   {
+    int a[100],n;
+    printf("\nEnter size of the array");
+    scanf("%d",&n);
+    printf("Enter the elements :");
+    for(int i=0;i<=n;i++)
+        scanf("%d",&a[i]);
+    Sort_ele(n,a);
     break;
   }
   case 8:
   {
-     int c, array[100], size, location, maximum;
-      printf("Input number of elements in array\n");
-      scanf("%d", &size);
-      printf("Enter %d integers\n", size);
-      for (c = 0; c < size; c++)
-        scanf("%d", &array[c]);
-    // finds the location of the largest number in the array
-      location = find_maximum(array, size);
-    // finds the value of the element in that location from the array
-      maximum  = array[location];
-    //prints the value of the largest element in the array
-      printf("Largest element value = %d.\n", maximum);
+    int a[100],n,i;
+    printf("Enter the size of the array: ");
+    scanf("%d",&n);
+    printf("Enter %d elements :",n);
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    largest(a,n);
+    return 0;
     break;
   }
   case 9:
   {
+    int n,a[100];
+    printf("enter the number of elements\n");
+    scanf("%d",&n);
+    printf("Enter the elements\n");
+    for(int i = 0 ; i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    sum_elements(n,a);
     break;
   }
   case 10:
@@ -107,6 +139,16 @@ void main()
   }
   case 11:
   {
+    int num1, num2, num3;
+    //taking input from user
+    printf("Enter First Number: ");
+    scanf("%d",&num1);
+    printf("Enter Second Number: ");
+    scanf("%d",&num2);
+    printf("Enter Third Number: ");
+    scanf("%d",&num3);
+    //calling the header function
+    largestOfThree(num1, num2, num3);
     break;
   }
   case 12:
@@ -138,6 +180,12 @@ void main()
   }
   case 16:
   {
+  	int n,r;
+    printf("Enter n:");
+    scanf("%d",&n);
+    printf("Enter r:");
+    scanf("%d",&r);
+    printf("%dP%d=%d\n",n,r,permutation(n,r));
     break;
   }
   case 17:
@@ -150,6 +198,17 @@ void main()
   }
   case 19:
   {
+    int num1,num2;
+    printf("Enter value of num1: ");
+    scanf("%d",&num1);
+    printf("Enter value of num2: ");
+    scanf("%d",&num2);
+    //displaying numbers entered by user
+    printf("Before Swapping: num1 is: %d, num2 is: %d\n",num1,num2);
+    //calling the user defined function findAverage
+    double average = findAverage(num1,num2);
+    //displaying the average
+    printf("Average of %d and %d is %lf\n",num1,num2, average);
     break;
   }
   case 20:
