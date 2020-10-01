@@ -274,6 +274,19 @@ void main()
   }
   case 29:
   {
+	  int rows,columns;
+	  printf("Enter the number rows matrix ");
+	  scanf("%d",&rows);
+	  printf("Enter the number columns matrix ");
+	  scanf("%d",&columns);
+	  int a[rows][columns];
+	  for(int i=0;i<rows;i++){
+		  for(int j=0;j<columns;j++){
+			  scanf("%d",&a[i][j]);
+		  }
+	  }
+	  int result=getSadlePoint(rows,columns,a);
+	  printf("The saddle point of given matrix is %d",result);
     break;
   }
   case 30:
