@@ -68,6 +68,10 @@ void main()
   }
   case 2:
   {
+    char s[100];
+    printf("\nEnter a string : ");
+    scanf("\n%[^\n]%*c", s);
+    toUpper(s);
     break;
   }
   case 3:
@@ -76,6 +80,14 @@ void main()
   }
   case 4:
   {
+    char input_str[50];
+    int length;
+    printf("\n Enter any string\n");
+    gets(input_str);
+    puts(input_str);
+    length = length_of_string(input_str);
+    printf("\n The length of the input string is  : %d\n",length);
+    
     break;
   }
   case 5:
@@ -104,6 +116,16 @@ void main()
   }
   case 11:
   {
+    int num1, num2, num3;
+    //taking input from user
+    printf("Enter First Number: ");
+    scanf("%d",&num1);
+    printf("Enter Second Number: ");
+    scanf("%d",&num2);
+    printf("Enter Third Number: ");
+    scanf("%d",&num3);
+    //calling the header function
+    largestOfThree(num1, num2, num3);
     break;
   }
   case 12:
@@ -153,6 +175,17 @@ void main()
   }
   case 19:
   {
+    int num1,num2;
+    printf("Enter value of num1: ");
+    scanf("%d",&num1);
+    printf("Enter value of num2: ");
+    scanf("%d",&num2);
+    //displaying numbers entered by user
+    printf("Before Swapping: num1 is: %d, num2 is: %d\n",num1,num2);
+    //calling the user defined function findAverage
+    double average = findAverage(num1,num2);
+    //displaying the average
+    printf("Average of %d and %d is %lf\n",num1,num2, average);
     break;
   }
   case 20:
