@@ -297,6 +297,24 @@ void main()
   }
   case 24:
   {
+    int i, n;
+    int* a;
+    printf("Enter the no. of elements : ");
+    scanf("%d",&n);
+    a=(int*)calloc(n, sizeof(int));
+    if (a==NULL)
+    {
+        printf("No memory allocated");
+        exit(0);
+    }
+    printf("\n");
+    printf("Enter the numbers : ");
+    for(i=0;i<n;++i)
+    {
+       scanf("%d",a+i);
+    }
+    Largest(a, n);
+    return 0;
     break;
   }
   case 25:
