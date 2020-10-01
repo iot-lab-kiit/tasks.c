@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int largest(int a[], int n)
 {
     int largest=a[0];
