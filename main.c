@@ -236,6 +236,12 @@ void main()
   }
   case 26:
   {
+    struct time start, stop, diff;
+    printf("Enter hours, minutes and seconds of start time: ");
+    scanf("%d%d%d", &start.hours,&start.minutes, &start.seconds);
+    printf("Enter hours, minutes and seconds of stop time: ");
+    scanf("%d%d%d", &stop.hours,&stop.minutes, &stop.seconds);
+    timeDiff(start,stop,diff);
     break;
   }
   case 27:
