@@ -190,11 +190,6 @@ void main()
   }
   case 17:
   {
-    int n, r, nCr;
-    printf("Enter the value for n and r : ");
-    scanf("%d%d", &n, &r);
-    nCr = fact(n)/(fact(r)*fact(n-r));
-    printf("\nThe value of nCr is: %d", nCr);
     break;
   }
   case 18:
