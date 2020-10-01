@@ -96,6 +96,12 @@ void main()
   }
   case 6:
   {
+    char f[100];
+    printf("Enter a string :- ");
+    gets(f);
+    printf("The reverse of the string is :- ");
+    rev(f, 0, strlen(f)-1);
+    printf("%s\n", f);
     break;
   }
   case 7:
@@ -130,11 +136,13 @@ void main()
   }
   case 12:
   {
-    char str[150],*ptr;
-    printf("Enter a string:");
-    scanf("\n%[^\n]%*c", str);
-    ptr=str;
-    countVC(ptr);
+    char s[1000];  
+    int vowels=0;
+    printf("Enter  the string :- ");
+    gets(s);
+    vowels = countVowels(s);
+    printf("The Number of Vowels in the string :- %d\nThe Number of Consonants in the string :- ",vowels,abs(vowels - strlen(s)));
+    printf("\n");
     break;
   }
   case 13:
@@ -176,6 +184,15 @@ void main()
   }
   case 18:
   {
+    float num1,num2;
+    printf("Enter value of num1: ");
+    scanf("%f",&num1);
+    printf("Enter value of num2: ");
+    scanf("%f",&num2);
+    //calling the user defined function findAverage
+    double pruduct = findProduct(num1,num2);
+    //displaying the average
+    printf("Product of %f and %f is %lf\n",num1,num2, pruduct);
     break;
   }
   case 19:
@@ -231,6 +248,19 @@ void main()
   }
   case 29:
   {
+	  int rows,columns;
+	  printf("Enter the number rows matrix ");
+	  scanf("%d",&rows);
+	  printf("Enter the number columns matrix ");
+	  scanf("%d",&columns);
+	  int a[rows][columns];
+	  for(int i=0;i<rows;i++){
+		  for(int j=0;j<columns;j++){
+			  scanf("%d",&a[i][j]);
+		  }
+	  }
+	  int result=getSadlePoint(rows,columns,a);
+	  printf("The saddle point of given matrix is %d",result);
     break;
   }
   case 30:
