@@ -111,10 +111,25 @@ void main()
   }
   case 8:
   {
+    int a[100],n,i;
+    printf("Enter the size of the array: ");
+    scanf("%d",&n);
+    printf("Enter %d elements :",n);
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    largest(a,n);
     break;
   }
   case 9:
   {
+    int n,a[100];
+    printf("enter the number of elements\n");
+    scanf("%d",&n);
+    printf("Enter the elements\n");
+    for(int i = 0 ; i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    sum_elements(n,a);
     break;
   }
   case 10:
@@ -164,10 +179,21 @@ void main()
   }
   case 16:
   {
+  	int n,r;
+    printf("Enter n:");
+    scanf("%d",&n);
+    printf("Enter r:");
+    scanf("%d",&r);
+    printf("%dP%d=%d\n",n,r,permutation(n,r));
     break;
   }
   case 17:
   {
+    int n, r, nCr;
+    printf("Enter the value for n and r : ");
+    scanf("%d%d", &n, &r);
+    nCr = fact(n)/(fact(r)*fact(n-r));
+    printf("\nThe value of nCr is: %d", nCr);
     break;
   }
   case 18:
@@ -205,6 +231,29 @@ void main()
   }
   case 22:
   {
+   int first[10][10], second[10][10], result[10][10], r1, c1, r2, c2;
+   printf("Enter rows and column for the first matrix: ");
+   scanf("%d %d", &r1, &c1);
+   printf("Enter rows and column for the second matrix: ");
+   scanf("%d %d", &r2, &c2);
+   // Taking input until
+   // 1st matrix columns is not equal to 2nd matrix row
+   while (c1 != r2) 
+   {
+      printf("Error! Enter rows and columns again.\n");
+      printf("Enter rows and columns for the first matrix: ");
+      scanf("%d%d", &r1, &c1);
+      printf("Enter rows and columns for the second matrix: ");
+      scanf("%d%d", &r2, &c2);
+   }
+   // get elements of the first matrix
+   getMatrixElements(first, r1, c1);
+   // get elements of the second matrix
+   getMatrixElements(second, r2, c2);
+   // multiply two matrices.
+   multiplyMatrices(first, second, result, r1, c1, r2, c2);
+   // display the result
+   display(result, r1, c2);
     break;
   }
   case 23:
