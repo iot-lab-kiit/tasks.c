@@ -85,7 +85,7 @@ void main()
     }
 	  printf("\n");
 	  sortArray(arr, n);
-	  printf("Array Strings in Alphabetical order are :- \n");
+	  printf("The Strings in Alphabetical order are :- \n");
 	  for (i = 0; i < n; i++){
 		  printf(" %s ",arr[i]);
 	  }
