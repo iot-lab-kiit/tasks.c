@@ -76,6 +76,14 @@ void main()
   }
   case 4:
   {
+    char input_str[50];
+    int length;
+    printf("\n Enter any string\n");
+    gets(input_str);
+    puts(input_str);
+    length = length_of_string(input_str);
+    printf("\n The length of the input string is  : %d\n",length);
+    
     break;
   }
   case 5:
