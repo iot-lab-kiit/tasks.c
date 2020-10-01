@@ -153,6 +153,13 @@ void main()
   }
   case 12:
   {
+    char s[1000];  
+    int vowels=0;
+    printf("Enter  the string :- ");
+    gets(s);
+    vowels = countVowels(s);
+    printf("The Number of Vowels in the string :- %d\nThe Number of Consonants in the string :- ",vowels,abs(vowels - strlen(s)));
+    printf("\n");
     break;
   }
   case 13:
