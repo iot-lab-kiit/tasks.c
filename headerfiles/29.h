@@ -1,11 +1,12 @@
 #include<stdio.h>
+#define maxOfInt 2147483647
 
 int getSadlePoint(int row,int column,int a[][column]){
-	int minInRow=INT_MAX,index,isSadle=1;
+	int minInRow=maxOfInt,index,isSadle=1;
 	for(int i=0;i<row;i++){
 		int j;
 		isSadle=1;
-		minInRow=INT_MAX;
+		minInRow=maxOfInt;
 		for( j=0;j<column;j++){
 			if(minInRow>a[i][j]){
 				minInRow=a[i][j];
@@ -13,7 +14,7 @@ int getSadlePoint(int row,int column,int a[][column]){
 			}
 		}
 		for(int k=0;k<row;k++){
-			if(a[k][j]>minInRow){
+			if(a[k][index]>minInRow){
 				isSadle=0;
 			}
 		}
