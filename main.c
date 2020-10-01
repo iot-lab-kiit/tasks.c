@@ -217,7 +217,33 @@ void main()
   }
   case 20:
   {
-    break;
+	  int rows,columns;
+	  printf("Enter the number rows of both matrices ");
+	  scanf("%d",&rows);
+	  printf("Enter the number columns of both matrices ");
+	  scanf("%d",&columns);
+	  int a[rows][columns],b[rows][columns];
+	  printf("Enter the elements of array 1 \n");
+	  for(int i=0;i<rows;i++){
+		  for(int j=0;j<columns;j++){
+			  scanf("%d",&a[i][j]);
+		  }
+	  }
+	  printf("Enter the elements of array 2 \n");
+	  for(int i=0;i<rows;i++){
+		  for(int j=0;j<columns;j++){
+			  scanf("%d",&b[i][j]);
+		  }
+	  }
+	  int **c=addMatrices(rows,columns, a,b);
+	   printf("The resultant array is \n");
+	  for(int i=0;i<rows;i++){
+		  for(int j=0;j<columns;j++){
+			  printf("%d ",c[i][j]);
+		  }
+		  printf("\n");
+	  }
+	  break;
   }
   case 21:
   {
