@@ -118,7 +118,6 @@ void main()
     for(i=0;i<n;i++)
         scanf("%d",&a[i]);
     largest(a,n);
-    return 0;
     break;
   }
   case 9:
