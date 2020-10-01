@@ -147,6 +147,17 @@ void main()
   }
   case 19:
   {
+    int num1,num2;
+    printf("Enter value of num1: ");
+    scanf("%d",&num1);
+    printf("Enter value of num2: ");
+    scanf("%d",&num2);
+    //displaying numbers entered by user
+    printf("Before Swapping: num1 is: %d, num2 is: %d\n",num1,num2);
+    //calling the user defined function findAverage
+    double average = findAverage(num1,num2);
+    //displaying the average
+    printf("Average of %d and %d is %lf\n",num1,num2, average);
     break;
   }
   case 20:
