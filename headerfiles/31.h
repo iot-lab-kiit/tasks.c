@@ -1,7 +1,7 @@
 #include <stdio.h>
-void MeanMedian(int ar[],int n)
+void MeanMedian()
 {
-	int i,temp,j,index,max=0;
+	int i,ar[50],n,temp,j,index,max=0;
 	float sum=0;
 	printf("Enter the no. of elements:");
 	scanf("%d",&n);
