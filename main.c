@@ -198,6 +198,15 @@ void main()
   }
   case 18:
   {
+    float num1,num2;
+    printf("Enter value of num1: ");
+    scanf("%f",&num1);
+    printf("Enter value of num2: ");
+    scanf("%f",&num2);
+    //calling the user defined function findAverage
+    double pruduct = findProduct(num1,num2);
+    //displaying the average
+    printf("Product of %f and %f is %lf\n",num1,num2, pruduct);
     break;
   }
   case 19:
