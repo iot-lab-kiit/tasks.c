@@ -169,6 +169,12 @@ void main()
   }
   case 13:
   {
+    char s[1000];
+    printf("Enter  the string :- ");
+    gets(s);
+    printf("The string is :- ");
+    display_str(s);
+    printf("\n");
     break;
   }
   case 14:
