@@ -96,6 +96,9 @@ void main()
   }
   case 6:
   {
+    printf("Enter a string: ");
+    revString();
+    return 0;
     break;
   }
   case 7:
