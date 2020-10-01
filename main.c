@@ -68,6 +68,10 @@ void main()
   }
   case 2:
   {
+    char s[100];
+    printf("\nEnter a string : ");
+    scanf("\n%[^\n]%*c", s);
+    toUpper(s);
     break;
   }
   case 3:
