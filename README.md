@@ -53,7 +53,7 @@
 - Program to Display its own Source Code as Output
 - Matrix rotation by 90 degrees clockwise and anticlockwise
 - Saddle point coordinates of a given matrix
-- Matrix printing in aspiral form
+- Matrix printing in a spiral form
 
 ---
 
