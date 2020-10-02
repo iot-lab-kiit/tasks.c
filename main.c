@@ -75,10 +75,36 @@ void main()
     toUpper(s);
     break;
   }
+
+  //sort a set of string in ascending alphabetical order
+
   case 3:
   {
-    break;
+	 
+	  char str[30][40],temp[30];
+
+	  int num = 0;
+
+	  printf("Input number of strings: ");
+	  
+	  scanf("%d", &num);
+	
+	  getchar();
+
+	  printf("Please Input %d strings :\n", num);
+	
+	  for(int loop = 0;loop < num; loop++)
+	       
+		  gets(str[loop]);
+
+       //Call the StringSort function in header 03.h
+
+	  StringSort(str, num);
+	
+	  break;
+
   }
+
   case 4:
   {
     char input_str[50];
