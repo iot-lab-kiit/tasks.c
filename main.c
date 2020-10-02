@@ -411,6 +411,8 @@ void main()
   }
   case 30:
   {
+	  //Finding Saddle point
+	  saddle(); // it takes input and finds the saddle point automatically
     break;
   }
   case 31:
