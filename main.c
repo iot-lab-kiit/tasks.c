@@ -96,36 +96,10 @@ void main()
 	       
 		  gets(str[loop]);
 
-       //Logic for sorting array of strings
+       //Call the StringSort function in header 03.h
 
-     	  for (int outer = 0; outer < num; outer++) {
-	  
-		  for (int inner = outer + 1; inner < num; inner++) {
-
-	      		  if (strcmp(str[outer], str[inner]) > 0) {
-
-				  strcpy(temp, str[outer]);
-
-		  		  strcpy(str[outer], str[inner]);
-
-		  		  strcpy(str[inner], temp);
-            
-			  }
-        
-		  }
-
-	  }
-
-       	  // print the strings after sort
-
-	  printf("The Strings after Sorting:\n");
-
-	  for(int loop = 0; loop < num; loop++) {
- 
-		  printf("%s\n",str[loop]);
-
-	  }
-
+	  StringSort(str, num);
+	
 	  break;
 
   }
