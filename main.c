@@ -351,6 +351,8 @@ void main()
   }
   case 28:
   {
+	  // Prints own source code
+	  printOwnCode();
     break;
   }
   case 29:
