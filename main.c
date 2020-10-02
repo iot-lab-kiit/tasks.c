@@ -299,6 +299,23 @@ void main()
   }
   case 21:
   {
+  	int r,c;
+  	printf("Enter number of rows and column for the matrices: \n");
+        scanf("%d%d", &r, &c);
+	int mat1[r][c],mat2[r][c],i,j;
+  	printf("Enter the elements of the first matrix: \n");
+  	for(i=0;i<r;i++){
+  		for(j=0;j<c;j++){
+  			scanf("%d",&mat1[i][j]);
+		  }
+	}
+  	printf("Enter the elements of the second matrix: \n");
+	for(i=0;i<r;i++){
+  		for(j=0;j<c;j++){
+  			scanf("%d",&mat2[i][j]);
+		  }
+	}
+	addMultidimentionalArray((int *)mat1,(int *)mat2,r,c);
     break;
   }
   case 22:
@@ -382,7 +399,25 @@ void main()
   }
   case 28:
   {
+	  
+    int matrix[10][10],clockwise[10][10],aclockwise[10][10],row,column;
+
+    printf("\nEnter the row and column values: ");
+    scanf("%d %d",&row,&column);
+
+    inputMatrix(matrix,row,column); 
+    //Function to find out the clockwise rotated matrix
+    findClockwiseMatrix(matrix,clockwise,row,column); 
+    //Function to find out the anticlockwise rotated matrix
+    findAntiClockwiseMatrix(matrix,aclockwise,row,column);  
+
+    printf("\nMatrix rotated by 90 degree clockwise: \n");
+    printMatrix(clockwise,column,row);
+
+    printf("\nMatrix rotated by 90 degree anticlockwise: \n");
+    printMatrix(aclockwise,column,row);
     break;
+	  
   }
   case 29:
   {
