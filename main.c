@@ -368,7 +368,25 @@ void main()
   }
   case 28:
   {
+	  
+    int matrix[10][10],clockwise[10][10],aclockwise[10][10],row,column;
+
+    printf("\nEnter the row and column values: ");
+    scanf("%d %d",&row,&column);
+
+    inputMatrix(matrix,row,column); 
+    //Function to find out the clockwise rotated matrix
+    findClockwiseMatrix(matrix,clockwise,row,column); 
+    //Function to find out the anticlockwise rotated matrix
+    findAntiClockwiseMatrix(matrix,aclockwise,row,column);  
+
+    printf("\nMatrix rotated by 90 degree clockwise: \n");
+    printMatrix(clockwise,column,row);
+
+    printf("\nMatrix rotated by 90 degree anticlockwise: \n");
+    printMatrix(aclockwise,column,row);
     break;
+	  
   }
   case 29:
   {
