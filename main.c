@@ -350,6 +350,17 @@ void main()
   }
   case 25:
   {
+    char stringMatrix[100][100];
+    //Find the number of words
+    int numberOfWords;
+    printf("\nEnter the number of words: ");
+    scanf("%d",&numberOfWords);
+    //Input the words
+    getWords(stringMatrix,numberOfWords);
+    //Sort the words in lexicographical order
+    sortWords(stringMatrix,numberOfWords);
+    //Print the words
+    printWords(stringMatrix,numberOfWords);
     break;
   }
   case 26:
