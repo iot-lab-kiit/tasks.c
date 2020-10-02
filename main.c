@@ -42,7 +42,7 @@ void main()
   printf("16. Find the value of nPr for given value of n & r\n17. Find the value of nCr for given value of n & r\n18. Program to multiply two floating numbers\n19. Program to find out Quotient and Remainder\n20. Program to find average of two numbers\n");
   printf("21. Program to Add Two Matrices Using Multi-dimensional Arrays\n22. Program to Multiply Two Matrices Using Multi-dimensional Arrays\n23. Program Swap Numbers in Cyclic Order Using Call by Reference\n24. Program to Find Largest Number Using Dynamic Memory Allocation\n25. Program to Sort Elements in Lexicographical Order (Dictionary Order)\n");
   printf("26. Program to Calculate Difference Between Two Time Periods\n27. Program to Display its own Source Code as Output\n28. Matrix rotation by 90 degrees clockwise and anticlockwise\n29. Saddle point coordinates of a given matrix\n30. Matrix printing in aspiral form\n31 Mean and Median of an unsorted array");
-  printf("Select your program number from above: ");
+  printf("\nSelect your program number from above: ");
   scanf("%d", &ch);
   switch (ch)
   {
@@ -161,6 +161,18 @@ void main()
   }
   case 10:
   {
+    //As per user choice,input for array given at runtime or directly insitialized at the program
+    /* int n;
+    printf("enter the number of elements:");
+    scanf("%d",&n);
+    int arr[n];
+    printf("Enter the elements:\n");
+    for(int i = 0 ; i<n;i++){
+        scanf("%d",&arr[i]);
+    } */
+    int arr[] = {12,45,78,234,67,7,0,234,6767};
+    int elements = sizeof(arr)/sizeof(int);
+    printf("Number of elements present inside the array:%d\n",elements);
     break;
   }
   case 11:
@@ -215,10 +227,17 @@ void main()
   }
   case 15:
   {
-    int num;  
-    printf("Enter a number:");
-    scanf("%d",&num);
-    accessPtr(num);
+    int a = 10;
+    int *p;
+
+    p = &a;
+    
+    printf("Value of a = %d\n",a);
+    printf("Address of a = %u\n",&a);
+
+    printf("Displaying Details of a through pointer variable:\n");
+    printf("Value of a = %d\n",*p);
+    printf("Address of a = %u\n",p);
     break;
   }
   case 16:
@@ -328,6 +347,14 @@ void main()
   }
   case 23:
   {
+    int a,b,c,temp=0;
+    printf("enter 3 variables:");
+    scanf("%d %d %d",&a,&b,&c);
+    printf("Before swapping in cyclic order:\n");
+    printf("%d,%d,%d\n",a,b,c);
+    referenceSwap(&a,&b,&c);
+    printf("After swapping in cyclic order:\n");
+    printf("%d,%d,%d\n",a,b,c);
     break;
   }
   case 24:
@@ -414,8 +441,15 @@ void main()
     break;
   }
   case 31:
-      MeanMedian();
-      break;
+  {
+    int arr[] = {1,3,4,2,7,5,8,6};
+    int n = sizeof(arr)/sizeof(int);
+    double mean = findMean(arr,n);
+    double median = findMedian(arr,n);
+    printf("Mean = %f\n",mean);
+    printf("Median = %f\n",median);
+    break;
+  }
   default:
     printf("Invalid Input. Try Again!\n");
     break;
