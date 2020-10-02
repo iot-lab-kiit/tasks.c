@@ -24,7 +24,7 @@ void sortWords(char stringMatrix[][100], int n)
     for (int i = 0; i < n-1; ++i) 
       for (int j = i + 1; j < n; ++j)
          if (strcmp(stringMatrix[i], stringMatrix[j]) > 0)
-            swap(stringMatrix[i],stringMatrix[j]);
+            swapString(stringMatrix[i],stringMatrix[j]);
 }
 
 //Function to print the words sorted in lexicographical order
