@@ -77,20 +77,6 @@ void main()
   }
   case 3:
   {
-    int n,i;
-    printf("Enter the Number of strings to be entered :- \n");
-    scanf("%d",&n);
-    char arr[n][MAX];
-    for(i = 0 ; i < n ; ++i){
-        scanf("%s",&arr[i]);
-    }
-	  printf("\n");
-	  sortArray(arr, n);
-	  printf("The Strings in Alphabetical order are :- \n");
-	  for (i = 0; i < n; i++){
-		  printf(" %s ",arr[i]);
-	  }
-	  printf("\n");
     break;
   }
   case 4:
@@ -184,7 +170,7 @@ void main()
     printf("Enter  the string :- ");
     gets(s);
     vowels = countVowels(s);
-    printf("The Number of Vowels in the string :- %d\nThe Number of Consonants in the string :- ",vowels,abs(vowels - strlen(s)));
+    printf("The Number of Vowels in the string :- %d\nThe Number of Consonants in the string :- %d",vowels,abs(vowels - strlen(s)));
     printf("\n");
     break;
   }
@@ -215,10 +201,6 @@ void main()
   }
   case 15:
   {
-    int num;  
-    printf("Enter a number:");
-    scanf("%d",&num);
-    accessPtr(num);
     break;
   }
   case 16:
