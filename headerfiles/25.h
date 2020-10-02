@@ -10,7 +10,7 @@ void getWords(char stringMatrix[][100], int n)
 }
 
 //Function to swap two words
-void swap(char s1[], char s2[]) 
+void swapString(char s1[], char s2[]) 
 { 
     char temp[100];
     strcpy(temp, s1);
