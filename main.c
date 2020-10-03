@@ -75,8 +75,12 @@ void main()
     toUpper(s);
     break;
   }
+
+  //sort a set of string in ascending alphabetical order
+
   case 3:
   {
+master
     int i,j,count;
    char str[25][25],temp[25];
    puts("How many strings u are going to enter?: ");
@@ -97,7 +101,32 @@ void main()
    for(i=0;i<=count;i++)
       printf(str[i]);
 
+	 
+	  char str[30][40],temp[30];
+
+	  int num = 0;
+
+	  printf("Input number of strings: ");
+	  
+	  scanf("%d", &num);
+	
+	  getchar();
+
+	  printf("Please Input %d strings :\n", num);
+	
+	  for(int loop = 0;loop < num; loop++)
+	       
+		  gets(str[loop]);
+
+       //Call the StringSort function in header 03.h
+
+	  StringSort(str, num);
+	
+	  break;
+master
+
   }
+
   case 4:
   {
     char input_str[50];
@@ -353,6 +382,17 @@ void main()
   }
   case 25:
   {
+    char stringMatrix[100][100];
+    //Find the number of words
+    int numberOfWords;
+    printf("\nEnter the number of words: ");
+    scanf("%d",&numberOfWords);
+    //Input the words
+    getWords(stringMatrix,numberOfWords);
+    //Sort the words in lexicographical order
+    sortWords(stringMatrix,numberOfWords);
+    //Print the words
+    printWords(stringMatrix,numberOfWords);
     break;
   }
   case 26:
