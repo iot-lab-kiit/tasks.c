@@ -1,12 +1,14 @@
 #include <stdio.h>
-void rev(char *g, int begin, int end)
+#include <string.h>
+void reverse(char str[], int j, int k)
 {
-   char h;
-   if (begin >= end)
-      return;
-
-   h = *(g+begin);
-   *(g+begin) = *(g+end);
-   *(g+end) = h;
-   rev(g, ++begin, --end);
+    char i;
+    i = str[j];
+    str[j] = str[k - j];
+    str[k - j] = i;
+    if (j == k/2)
+        {
+            return;
+        }
+    reverse(str, j + 1, k);
 }
