@@ -385,6 +385,13 @@ void main()
   }
   case 27:
   {
+    char mychar;  
+    FILE *fp = fopen(__FILE__, "r"); 
+    do{ 
+        mychar = fgetc(fp); 
+        putchar(mychar); 
+    }while(mychar != EOF); 
+    fclose(fp);
     break;
   }
   case 28:
