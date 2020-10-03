@@ -80,7 +80,6 @@ void main()
 
   case 3:
   {
-master
     int i,j,count;
    char str[25][25],temp[25];
    puts("How many strings u are going to enter?: ");
@@ -100,30 +99,7 @@ master
    printf("Order of Sorted Strings:");
    for(i=0;i<=count;i++)
       printf(str[i]);
-
-	 
-	  char str[30][40],temp[30];
-
-	  int num = 0;
-
-	  printf("Input number of strings: ");
-	  
-	  scanf("%d", &num);
-	
-	  getchar();
-
-	  printf("Please Input %d strings :\n", num);
-	
-	  for(int loop = 0;loop < num; loop++)
-	       
-		  gets(str[loop]);
-
-       //Call the StringSort function in header 03.h
-
-	  StringSort(str, num);
-	
-	  break;
-master
+   break;
 
   }
 
