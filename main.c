@@ -174,6 +174,8 @@ void main()
   }
   case 10:
   {
+    int A[] = {11, 12, 15,16, 14, 19, 20, 28, 39, 34, 32, 10};
+    count(A);
     break;
   }
   case 11:
@@ -352,7 +354,7 @@ void main()
     printf("::After Swapping::\n");
     printf("a = %d \nb = %d \nc = %d", a, b, c);
     printf("\n");
-    
+
     break;
   }
   case 24:
