@@ -7,5 +7,5 @@ int largest(int a[], int n)
         if(a[i]>largest)
             largest=a[i];
     }
-    printf("The largest element is: %d",largest);
+    return largest;
 }
