@@ -238,6 +238,7 @@ void main()
   }
   case 15:
   {
+    actionsonpointer();
     break;
   }
   case 16:
