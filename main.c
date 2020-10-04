@@ -31,6 +31,7 @@
 #include "./headerfiles/29.h"
 #include "./headerfiles/30.h"
 #include "./headerfiles/31.h"
+#include "./headerfiles/32.h"
 
 void main()
 {
@@ -453,6 +454,14 @@ void main()
   case 31:
     MeanMedian();
     break;
+  case 32:
+  {
+    int p_row;
+    printf("Enter no of rows: ");
+    scanf("%d",&p_row);
+    pascal(p_row);
+    break;
+  }
   default:
     printf("Invalid Input. Try Again!\n");
     break;
