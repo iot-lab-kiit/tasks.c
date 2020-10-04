@@ -42,7 +42,7 @@ void main()
   printf("16. Find the value of nPr for given value of n & r\n17. Find the value of nCr for given value of n & r\n18. Program to multiply two floating numbers\n19. Program to find out Quotient and Remainder\n20. Program to find average of two numbers\n");
   printf("21. Program to Add Two Matrices Using Multi-dimensional Arrays\n22. Program to Multiply Two Matrices Using Multi-dimensional Arrays\n23. Program Swap Numbers in Cyclic Order Using Call by Reference\n24. Program to Find Largest Number Using Dynamic Memory Allocation\n25. Program to Sort Elements in Lexicographical Order (Dictionary Order)\n");
   printf("26. Program to Calculate Difference Between Two Time Periods\n27. Program to Display its own Source Code as Output\n28. Matrix rotation by 90 degrees clockwise and anticlockwise\n29. Saddle point coordinates of a given matrix\n30. Matrix printing in aspiral form\n31 Mean and Median of an unsorted array");
-  printf("Select your program number from above: ");
+  printf("\nSelect your program number from above: ");
   scanf("%d", &ch);
   switch (ch)
   {
@@ -406,23 +406,25 @@ void main()
   }
   case 28:
   {
-
-    int matrix[10][10], clockwise[10][10], aclockwise[10][10], row, column;
-
-    printf("\nEnter the row and column values: ");
-    scanf("%d %d", &row, &column);
-
-    inputMatrix(matrix, row, column);
+   int row, column;
+    printf("\nEnter the number of rows: ");
+    scanf("%d", &row);
+    printf("\nEnter the number of column: ");
+    scanf("%d", &column);
+    int matrix[row][column], clockwise[column][row], aclockwise[column][row];
+    inputMatrix(&matrix[0][0],row,column);
+    printf("\nOriginal Matrix:\n");
+    printMatrix(&matrix[0][0], row, column);
     //Function to find out the clockwise rotated matrix
-    findClockwiseMatrix(matrix, clockwise, row, column);
+    findClockwiseMatrix(&matrix[0][0],&clockwise[0][0],row,column); 
     //Function to find out the anticlockwise rotated matrix
-    findAntiClockwiseMatrix(matrix, aclockwise, row, column);
+    findAntiClockwiseMatrix(&matrix[0][0],&aclockwise[0][0],row,column);  
 
     printf("\nMatrix rotated by 90 degree clockwise: \n");
-    printMatrix(clockwise, column, row);
+    printMatrix(&clockwise[0][0],column,row);
 
     printf("\nMatrix rotated by 90 degree anticlockwise: \n");
-    printMatrix(aclockwise, column, row);
+    printMatrix(&aclockwise[0][0],column,row);
     break;
   }
   case 29:
