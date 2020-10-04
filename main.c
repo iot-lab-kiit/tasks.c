@@ -175,8 +175,18 @@ void main()
   }
   case 10:
   {
-    num_of_elem();
+    int n;
+    printf("enter the size of the array");
+    scanf ("%d",&n);
+    int a[n];
+    for (int i = 0; i < n; i++)
+    {
+      scanf("%d", &a[i]);
+    }
+    int sizeofarray=size(a);
+    printf("no of elements in the array is    %d",countelements(a,sizeofarray));
     break;
+    
   }
   case 11:
   {
