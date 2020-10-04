@@ -268,12 +268,9 @@ void main()
     scanf("%d", &dividend);
     printf("Enter a value for the divisor: ");
     scanf("%d", &divisor);
-
-    quotient = dividend / divisor;
-    remainder = dividend % divisor;
     
-    printf("The quotient is %d\n", quotient);
-    printf("The remainder is %d\n", remainder);
+    quotientandremainder(dividend, divisor);
+    break;
   }
   case 20:
   {
