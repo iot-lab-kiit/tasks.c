@@ -156,7 +156,7 @@ void main()
     printf("Enter %d elements :",n);
     for(i=0;i<n;i++)
         scanf("%d",&a[i]);
-    largest(a,n);
+    printf("%d",largest(a,n));
     break;
   }
   case 9:
