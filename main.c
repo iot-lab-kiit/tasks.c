@@ -58,13 +58,14 @@ void main()
   {
     int n;
     printf("\nEnter the size of an array\n");
-    scanf("%d",&n);
+    scanf("%d", &n);
     int A[n];
     printf("\nEnter the values of an array\n");
-    for(int i=0;i<n;i++){
-        scanf("%d",&A[i]);
+    for (int i = 0; i < n; i++)
+    {
+      scanf("%d", &A[i]);
     }
-    printf("\nDistinct Elements count: %d\n",Array_count_distinct(A,n));
+    printf("\nDistinct Elements count: %d\n", Array_count_distinct(A, n));
     break;
   }
   case 2:
@@ -76,33 +77,32 @@ void main()
     break;
   }
 
-  //sort a set of string in ascending alphabetical order
+    //sort a set of string in ascending alphabetical order
 
   case 3:
   {
-	 
-	  char str[30][40],temp[30];
 
-	  int num = 0;
+    char str[30][40], temp[30];
 
-	  printf("Input number of strings: ");
-	  
-	  scanf("%d", &num);
-	
-	  getchar();
+    int num = 0;
 
-	  printf("Please Input %d strings :\n", num);
-	
-	  for(int loop = 0;loop < num; loop++)
-	       
-		  gets(str[loop]);
+    printf("Input number of strings: ");
 
-       //Call the StringSort function in header 03.h
+    scanf("%d", &num);
 
-	  StringSort(str, num);
-	
-	  break;
+    getchar();
 
+    printf("Please Input %d strings :\n", num);
+
+    for (int loop = 0; loop < num; loop++)
+
+      gets(str[loop]);
+
+    //Call the StringSort function in header 03.h
+
+    StringSort(str, num);
+
+    break;
   }
 
   case 4:
@@ -113,18 +113,18 @@ void main()
     gets(input_str);
     puts(input_str);
     length = length_of_string(input_str);
-    printf("\n The length of the input string is  : %d\n",length);
-    
+    printf("\n The length of the input string is  : %d\n", length);
+
     break;
   }
   case 5:
   {
-   char str1[50], str2[50];
-   printf("\nEnter first string: ");
-   scanf("%s",str1);
-   printf("\nEnter second string: ");
-   scanf("%s",str2);
-   concat_str(str1,str2);
+    char str1[50], str2[50];
+    printf("\nEnter first string: ");
+    scanf("%s", str1);
+    printf("\nEnter second string: ");
+    scanf("%s", str2);
+    concat_str(str1, str2);
     break;
   }
   case 6:
@@ -133,42 +133,43 @@ void main()
     printf("Enter a string :- ");
     gets(f);
     printf("The reverse of the string is :- ");
-    rev(f, 0, strlen(f)-1);
+    rev(f, 0, strlen(f) - 1);
     printf("%s\n", f);
     break;
   }
   case 7:
   {
-    int a[100],n;
+    int a[100], n;
     printf("\nEnter size of the array");
-    scanf("%d",&n);
+    scanf("%d", &n);
     printf("Enter the elements :");
-    for(int i=0;i<=n;i++)
-        scanf("%d",&a[i]);
-    Sort_ele(n,a);
+    for (int i = 0; i <= n; i++)
+      scanf("%d", &a[i]);
+    Sort_ele(n, a);
     break;
   }
   case 8:
   {
-    int a[100],n,i;
+    int a[100], n, i;
     printf("Enter the size of the array: ");
-    scanf("%d",&n);
-    printf("Enter %d elements :",n);
-    for(i=0;i<n;i++)
-        scanf("%d",&a[i]);
-    largest(a,n);
+    scanf("%d", &n);
+    printf("Enter %d elements :", n);
+    for (i = 0; i < n; i++)
+      scanf("%d", &a[i]);
+    largest(a, n);
     break;
   }
   case 9:
   {
-    int n,a[100];
+    int n, a[100];
     printf("enter the number of elements\n");
-    scanf("%d",&n);
+    scanf("%d", &n);
     printf("Enter the elements\n");
-    for(int i = 0 ; i<n;i++){
-        scanf("%d",&a[i]);
+    for (int i = 0; i < n; i++)
+    {
+      scanf("%d", &a[i]);
     }
-    sum_elements(n,a);
+    sum_elements(n, a);
     break;
   }
   case 10:
@@ -179,22 +180,22 @@ void main()
   {
     int num1, num2, num3;
     printf("Enter First Number: ");
-    scanf("%d",&num1);
+    scanf("%d", &num1);
     printf("Enter Second Number: ");
-    scanf("%d",&num2);
+    scanf("%d", &num2);
     printf("Enter Third Number: ");
-    scanf("%d",&num3);
+    scanf("%d", &num3);
     largestOfThree(num1, num2, num3);
     break;
   }
   case 12:
   {
-    char s[1000];  
-    int vowels=0;
+    char s[1000];
+    int vowels = 0;
     printf("Enter  the string :- ");
     gets(s);
     vowels = countVowels(s);
-    printf("The Number of Vowels in the string :- %d\nThe Number of Consonants in the string :- %d",vowels,abs(vowels - strlen(s)));
+    printf("The Number of Vowels in the string :- %d\nThe Number of Consonants in the string :- %d", vowels, abs(vowels - strlen(s)));
     printf("\n");
     break;
   }
@@ -210,17 +211,17 @@ void main()
   }
   case 14:
   {
-    int num1,num2;
+    int num1, num2;
     printf("Enter value of num1: ");
-    scanf("%d",&num1);
+    scanf("%d", &num1);
     printf("Enter value of num2: ");
-    scanf("%d",&num2);
+    scanf("%d", &num2);
     //displaying numbers before swapping
-    printf("Before Swapping: num1 is: %d, num2 is: %d\n",num1,num2);
+    printf("Before Swapping: num1 is: %d, num2 is: %d\n", num1, num2);
     //calling the user defined function swap()
-    swapusingpointer(&num1,&num2);
+    swapusingpointer(&num1, &num2);
     //displaying numbers after swapping
-    printf("After  Swapping: num1 is: %d, num2 is: %d\n",num1,num2);
+    printf("After  Swapping: num1 is: %d, num2 is: %d\n", num1, num2);
     break;
   }
   case 15:
@@ -229,12 +230,12 @@ void main()
   }
   case 16:
   {
-  	int n,r;
+    int n, r;
     printf("Enter n:");
-    scanf("%d",&n);
+    scanf("%d", &n);
     printf("Enter r:");
-    scanf("%d",&r);
-    printf("%dP%d=%d\n",n,r,permutation(n,r));
+    scanf("%d", &r);
+    printf("%dP%d=%d\n", n, r, permutation(n, r));
     break;
   }
   case 17:
@@ -242,117 +243,135 @@ void main()
     int n, r, nCr;
     printf("Enter the value for n and r : ");
     scanf("%d%d", &n, &r);
-    nCr = fact(n)/(fact(r)*fact(n-r));
+    nCr = fact(n) / (fact(r) * fact(n - r));
     printf("\nThe value of nCr is: %d", nCr);
     break;
   }
   case 18:
   {
-    float num1,num2;
+    float num1, num2;
     printf("Enter value of num1: ");
-    scanf("%f",&num1);
+    scanf("%f", &num1);
     printf("Enter value of num2: ");
-    scanf("%f",&num2);
+    scanf("%f", &num2);
     //calling the user defined function findAverage
-    double pruduct = findProduct(num1,num2);
+    double pruduct = findProduct(num1, num2);
     //displaying the average
-    printf("Product of %f and %f is %lf\n",num1,num2, pruduct);
+    printf("Product of %f and %f is %lf\n", num1, num2, pruduct);
     break;
   }
   case 19:
   {
-    int num1,num2;
+    int num1, num2;
     printf("Enter value of num1: ");
-    scanf("%d",&num1);
+    scanf("%d", &num1);
     printf("Enter value of num2: ");
-    scanf("%d",&num2);
+    scanf("%d", &num2);
     //displaying numbers entered by user
-    printf("Before Swapping: num1 is: %d, num2 is: %d\n",num1,num2);
+    printf("Before Swapping: num1 is: %d, num2 is: %d\n", num1, num2);
     //calling the user defined function findAverage
-    double average = findAverage(num1,num2);
+    double average = findAverage(num1, num2);
     //displaying the average
-    printf("Average of %d and %d is %lf\n",num1,num2, average);
+    printf("Average of %d and %d is %lf\n", num1, num2, average);
     break;
   }
   case 20:
   {
     int n1, n2;
     printf("Enter first number: ");
-    scanf("%d",&n1);
+    scanf("%d", &n1);
     printf("Enter second number: ");
-    scanf("%d",&n2);
-    avg(n1,n2);
+    scanf("%d", &n2);
+    avg(n1, n2);
     break;
   }
   case 21:
   {
-  	int r,c;
-  	printf("Enter number of rows and column for the matrices: \n");
-        scanf("%d%d", &r, &c);
-	int mat1[r][c],mat2[r][c],i,j;
-  	printf("Enter the elements of the first matrix: \n");
-  	for(i=0;i<r;i++){
-  		for(j=0;j<c;j++){
-  			scanf("%d",&mat1[i][j]);
-		  }
-	}
-  	printf("Enter the elements of the second matrix: \n");
-	for(i=0;i<r;i++){
-  		for(j=0;j<c;j++){
-  			scanf("%d",&mat2[i][j]);
-		  }
-	}
-	addMultidimentionalArray((int *)mat1,(int *)mat2,r,c);
+    int r, c;
+    printf("Enter number of rows and column for the matrices: \n");
+    scanf("%d%d", &r, &c);
+    int mat1[r][c], mat2[r][c], i, j;
+    printf("Enter the elements of the first matrix: \n");
+    for (i = 0; i < r; i++)
+    {
+      for (j = 0; j < c; j++)
+      {
+        scanf("%d", &mat1[i][j]);
+      }
+    }
+    printf("Enter the elements of the second matrix: \n");
+    for (i = 0; i < r; i++)
+    {
+      for (j = 0; j < c; j++)
+      {
+        scanf("%d", &mat2[i][j]);
+      }
+    }
+    addMultidimentionalArray((int *)mat1, (int *)mat2, r, c);
     break;
   }
   case 22:
   {
-   int first[10][10], second[10][10], result[10][10], r1, c1, r2, c2;
-   printf("Enter rows and column for the first matrix: ");
-   scanf("%d %d", &r1, &c1);
-   printf("Enter rows and column for the second matrix: ");
-   scanf("%d %d", &r2, &c2);
-   // Taking input until
-   // 1st matrix columns is not equal to 2nd matrix row
-   while (c1 != r2) 
-   {
+    int first[10][10], second[10][10], result[10][10], r1, c1, r2, c2;
+    printf("Enter rows and column for the first matrix: ");
+    scanf("%d %d", &r1, &c1);
+    printf("Enter rows and column for the second matrix: ");
+    scanf("%d %d", &r2, &c2);
+    // Taking input until
+    // 1st matrix columns is not equal to 2nd matrix row
+    while (c1 != r2)
+    {
       printf("Error! Enter rows and columns again.\n");
       printf("Enter rows and columns for the first matrix: ");
       scanf("%d%d", &r1, &c1);
       printf("Enter rows and columns for the second matrix: ");
       scanf("%d%d", &r2, &c2);
-   }
-   // get elements of the first matrix
-   getMatrixElements(first, r1, c1);
-   // get elements of the second matrix
-   getMatrixElements(second, r2, c2);
-   // multiply two matrices.
-   multiplyMatrices(first, second, result, r1, c1, r2, c2);
-   // display the result
-   display(result, r1, c2);
+    }
+    // get elements of the first matrix
+    getMatrixElements(first, r1, c1);
+    // get elements of the second matrix
+    getMatrixElements(second, r2, c2);
+    // multiply two matrices.
+    multiplyMatrices(first, second, result, r1, c1, r2, c2);
+    // display the result
+    display(result, r1, c2);
     break;
   }
   case 23:
   {
+    int a, b, c;
+
+    printf("Enter a, b and c (space separated): ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    printf("::Before Swapping::\n");
+    printf("a = %d \nb = %d \nc = %d\n", a, b, c);
+
+    cyclicSwapbyRef(&a, &b, &c);
+
+    printf("::After Swapping::\n");
+    printf("a = %d \nb = %d \nc = %d", a, b, c);
+    printf("\n");
+    
     break;
   }
   case 24:
   {
     int i, n;
-    int* a;
+    int *a;
     printf("Enter the no. of elements : ");
-    scanf("%d",&n);
-    a=(int*)calloc(n, sizeof(int));
-    if (a==NULL)
+    scanf("%d", &n);
+    a = (int *)calloc(n, sizeof(int));
+    if (a == NULL)
     {
-        printf("No memory allocated");
-        exit(0);
+      printf("No memory allocated");
+      exit(0);
     }
     printf("\n");
     printf("Enter the numbers : ");
-    for(i=0;i<n;++i)
+    for (i = 0; i < n; ++i)
     {
-       scanf("%d",a+i);
+      scanf("%d", a + i);
     }
     Largest(a, n);
     //return 0;
@@ -364,23 +383,23 @@ void main()
     //Find the number of words
     int numberOfWords;
     printf("\nEnter the number of words: ");
-    scanf("%d",&numberOfWords);
+    scanf("%d", &numberOfWords);
     //Input the words
-    getWords(stringMatrix,numberOfWords);
+    getWords(stringMatrix, numberOfWords);
     //Sort the words in lexicographical order
-    sortWords(stringMatrix,numberOfWords);
+    sortWords(stringMatrix, numberOfWords);
     //Print the words
-    printWords(stringMatrix,numberOfWords);
+    printWords(stringMatrix, numberOfWords);
     break;
   }
   case 26:
   {
     struct time start, stop, diff;
     printf("Enter hours, minutes and seconds of start time: ");
-    scanf("%d%d%d", &start.hours,&start.minutes, &start.seconds);
+    scanf("%d%d%d", &start.hours, &start.minutes, &start.seconds);
     printf("Enter hours, minutes and seconds of stop time: ");
-    scanf("%d%d%d", &stop.hours,&stop.minutes, &stop.seconds);
-    timeDiff(start,stop,diff);
+    scanf("%d%d%d", &stop.hours, &stop.minutes, &stop.seconds);
+    timeDiff(start, stop, diff);
     break;
   }
   case 27:
@@ -389,41 +408,42 @@ void main()
   }
   case 28:
   {
-	  
-    int matrix[10][10],clockwise[10][10],aclockwise[10][10],row,column;
+
+    int matrix[10][10], clockwise[10][10], aclockwise[10][10], row, column;
 
     printf("\nEnter the row and column values: ");
-    scanf("%d %d",&row,&column);
+    scanf("%d %d", &row, &column);
 
-    inputMatrix(matrix,row,column); 
+    inputMatrix(matrix, row, column);
     //Function to find out the clockwise rotated matrix
-    findClockwiseMatrix(matrix,clockwise,row,column); 
+    findClockwiseMatrix(matrix, clockwise, row, column);
     //Function to find out the anticlockwise rotated matrix
-    findAntiClockwiseMatrix(matrix,aclockwise,row,column);  
+    findAntiClockwiseMatrix(matrix, aclockwise, row, column);
 
     printf("\nMatrix rotated by 90 degree clockwise: \n");
-    printMatrix(clockwise,column,row);
+    printMatrix(clockwise, column, row);
 
     printf("\nMatrix rotated by 90 degree anticlockwise: \n");
-    printMatrix(aclockwise,column,row);
+    printMatrix(aclockwise, column, row);
     break;
-	  
   }
   case 29:
   {
-	  int rows,columns;
-	  printf("Enter the number rows matrix ");
-	  scanf("%d",&rows);
-	  printf("Enter the number columns matrix ");
-	  scanf("%d",&columns);
-	  int a[rows][columns];
-	  for(int i=0;i<rows;i++){
-		  for(int j=0;j<columns;j++){
-			  scanf("%d",&a[i][j]);
-		  }
-	  }
-	  int result=getSadlePoint(rows,columns,a);
-	  printf("The saddle point of given matrix is %d",result);
+    int rows, columns;
+    printf("Enter the number rows matrix ");
+    scanf("%d", &rows);
+    printf("Enter the number columns matrix ");
+    scanf("%d", &columns);
+    int a[rows][columns];
+    for (int i = 0; i < rows; i++)
+    {
+      for (int j = 0; j < columns; j++)
+      {
+        scanf("%d", &a[i][j]);
+      }
+    }
+    int result = getSadlePoint(rows, columns, a);
+    printf("The saddle point of given matrix is %d", result);
     break;
   }
   case 30:
@@ -431,8 +451,8 @@ void main()
     break;
   }
   case 31:
-      MeanMedian();
-      break;
+    MeanMedian();
+    break;
   default:
     printf("Invalid Input. Try Again!\n");
     break;
