@@ -174,46 +174,24 @@ void main()
   }
   case 10:
   {
+	  // number of elements in an array
+	  int arr[]= {10,20,30,40,50};
+	  int length;
+	  
+	  int length = sizeof(arr) / sizeof(arr[0]); 
+	  printf("Number of elements present in the array: %d", length); 
     break;
   }
   case 11:
   {
     int num1, num2, num3;
-    int *p1, *p2, *p3;
     printf("Enter First Number: ");
     scanf("%d", &num1);
     printf("Enter Second Number: ");
     scanf("%d", &num2);
     printf("Enter Third Number: ");
     scanf("%d", &num3);
-
-    p1 = &num1;
-    p2 = &num2;
-    p3 = &num3;
-
-    if(*p1 > *p2)
-    {
-	    if(*p1 > *p3)
-	    {
-	     	printf("%d is the largest number", *p1);
-	    }
-	    else
-	    {
-		    printf("%d is the largest number", *p3);
-	    }
-    }
-    else
-    {
-	    if(*p2 > *p3)
-	    {
-	    	printf("%d is the largest number", *p2);
-	    }
-	    else
-	    {
-	     	printf("%d is the largest number", *p3);
-	    }
-    }
-
+    largestofThree(num1, num2, num3);
     break;
   }
   case 12:
