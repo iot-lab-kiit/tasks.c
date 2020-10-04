@@ -108,14 +108,12 @@ void main()
 
   case 4:
   {
-    char input_str[50];
+    char input_str[100];
     int length;
-    printf("\n Enter any string\n");
-    gets(input_str);
+    printf("\nEnter any string\n");
+    scanf("\n%[^\n]%n", input_str, &length);
     puts(input_str);
-    length = length_of_string(input_str);
-    printf("\n The length of the input string is  : %d\n", length);
-
+    printf("\nThe length of the input string is  : %d\n", length-1);
     break;
   }
   case 5:
