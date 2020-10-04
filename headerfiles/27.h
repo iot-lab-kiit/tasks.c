@@ -11,5 +11,4 @@ void printSourceCode() {
     } while(ch != EOF);  // this will loop until EOF is reached
     
     fclose(file);
-    return 0;
 }
