@@ -174,7 +174,19 @@ void main()
   }
   case 10:
   {
+    int n;
+    printf("enter the size of the array");
+    scanf ("%d",&n);
+    int a[n];
+    printf("Enter the elements\n");
+    for (int i = 0; i < n; i++)
+    {
+      scanf("%d", &a[i]);
+    }
+    int size=sizeof(a)/sizeof(a[0]);
+    printf("%d",size);
     break;
+    
   }
   case 11:
   {
