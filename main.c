@@ -178,13 +178,12 @@ void main()
     printf("enter the size of the array");
     scanf ("%d",&n);
     int a[n];
-    printf("Enter the elements\n");
     for (int i = 0; i < n; i++)
     {
       scanf("%d", &a[i]);
     }
-    int size=sizeof(a)/sizeof(a[0]);
-    printf("%d",size);
+    int sizeofarray=size(a);
+    printf("no of elements in the array is    %d",countelements(a,sizeofarray));
     break;
     
   }
