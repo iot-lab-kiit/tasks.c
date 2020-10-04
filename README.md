@@ -22,7 +22,7 @@
 
 **Please refer to _CONTRIBUTING.md_ for the same.**
 
-**The following problems need solutions as on date 28<sup>th</sup> Sept, 2020**
+**The following problems need solutions as on date 28<sup>th</sup> 31 October, 2020**
 
 - Count distinct elements of an array
 - Program to convert string from lower case to upper case
