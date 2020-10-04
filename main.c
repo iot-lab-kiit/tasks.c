@@ -174,6 +174,9 @@ void main()
   }
   case 10:
   {
+    int n, array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    n = sizeof array;
+    printf("%d \n", n / sizeof(int));
     break;
   }
   case 11:
@@ -352,7 +355,7 @@ void main()
     printf("::After Swapping::\n");
     printf("a = %d \nb = %d \nc = %d", a, b, c);
     printf("\n");
-    
+
     break;
   }
   case 24:
