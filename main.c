@@ -191,7 +191,7 @@ void main()
     scanf("%d", &num2);
     printf("Enter Third Number: ");
     scanf("%d", &num3);
-    largestofThree(num1, num2, num3);
+    largestOfThree(num1, num2, num3);
     break;
   }
   case 12:
