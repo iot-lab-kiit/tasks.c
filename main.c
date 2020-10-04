@@ -174,6 +174,7 @@ void main()
   }
   case 10:
   {
+    num_of_elem();
     break;
   }
   case 11:
