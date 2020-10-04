@@ -404,6 +404,7 @@ void main()
   }
   case 27:
   {
+    printSourceCode();
     break;
   }
   case 28:
