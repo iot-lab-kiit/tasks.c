@@ -31,6 +31,7 @@
 #include "./headerfiles/29.h"
 #include "./headerfiles/30.h"
 #include "./headerfiles/31.h"
+#include "./headerfiles/32.h"
 
 void main()
 {
@@ -107,14 +108,12 @@ void main()
 
   case 4:
   {
-    char input_str[50];
+    char input_str[100];
     int length;
-    printf("\n Enter any string\n");
-    gets(input_str);
+    printf("\nEnter any string\n");
+    scanf("\n%[^\n]%n", input_str, &length);
     puts(input_str);
-    length = length_of_string(input_str);
-    printf("\n The length of the input string is  : %d\n", length);
-
+    printf("\nThe length of the input string is  : %d\n", length-1);
     break;
   }
   case 5:
@@ -174,19 +173,22 @@ void main()
   }
   case 10:
   {
-    int *A, i;
+
+    int *A, i=0;
     A = (int *) malloc (sizeof(int));
     char ch;
     do
     {
         printf("Enter the data: ");
-        scanf("%d", A+i);
+        scanf("%d", (A+i));
         i++;
         printf("Do you want to enter more data(y/n): ");
         scanf(" %ch", &ch);
     }while(ch == 'y');
     count(i);
+
     break;
+
   }
   case 11:
   {
@@ -238,6 +240,7 @@ void main()
   }
   case 15:
   {
+    actionsonpointer();
     break;
   }
   case 16:
@@ -280,7 +283,7 @@ void main()
     scanf("%d", &dividend);
     printf("Enter a value for the divisor: ");
     scanf("%d", &divisor);
-    
+
     quotientandremainder(dividend, divisor);
     break;
   }
@@ -428,9 +431,9 @@ void main()
     printf("\nOriginal Matrix:\n");
     printMatrix(&matrix[0][0], row, column);
     //Function to find out the clockwise rotated matrix
-    findClockwiseMatrix(&matrix[0][0],&clockwise[0][0],row,column); 
+    findClockwiseMatrix(&matrix[0][0],&clockwise[0][0],row,column);
     //Function to find out the anticlockwise rotated matrix
-    findAntiClockwiseMatrix(&matrix[0][0],&aclockwise[0][0],row,column);  
+    findAntiClockwiseMatrix(&matrix[0][0],&aclockwise[0][0],row,column);
 
     printf("\nMatrix rotated by 90 degree clockwise: \n");
     printMatrix(&clockwise[0][0],column,row);
@@ -465,6 +468,14 @@ void main()
   case 31:
     MeanMedian();
     break;
+  case 32:
+  {
+    int p_row;
+    printf("Enter no of rows: ");
+    scanf("%d",&p_row);
+    pascal(p_row);
+    break;
+  }
   default:
     printf("Invalid Input. Try Again!\n");
     break;
