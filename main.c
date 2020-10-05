@@ -173,18 +173,22 @@ void main()
   }
   case 10:
   {
-    int n;
-    printf("enter the size of the array");
-    scanf ("%d",&n);
-    int a[n];
-    for (int i = 0; i < n; i++)
+
+    int *A, i=0;
+    A = (int *) malloc (sizeof(int));
+    char ch;
+    do
     {
-      scanf("%d", &a[i]);
-    }
-    int sizeofarray=size(a);
-    printf("no of elements in the array is    %d",countelements(a,sizeofarray));
+        printf("Enter the data: ");
+        scanf("%d", (A+i));
+        i++;
+        printf("Do you want to enter more data(y/n): ");
+        scanf(" %ch", &ch);
+    }while(ch == 'y');
+    count(i);
+
     break;
-    
+
   }
   case 11:
   {
@@ -278,7 +282,7 @@ void main()
     scanf("%d", &dividend);
     printf("Enter a value for the divisor: ");
     scanf("%d", &divisor);
-    
+
     quotientandremainder(dividend, divisor);
     break;
   }
@@ -359,7 +363,7 @@ void main()
     printf("::After Swapping::\n");
     printf("a = %d \nb = %d \nc = %d", a, b, c);
     printf("\n");
-    
+
     break;
   }
   case 24:
@@ -426,9 +430,9 @@ void main()
     printf("\nOriginal Matrix:\n");
     printMatrix(&matrix[0][0], row, column);
     //Function to find out the clockwise rotated matrix
-    findClockwiseMatrix(&matrix[0][0],&clockwise[0][0],row,column); 
+    findClockwiseMatrix(&matrix[0][0],&clockwise[0][0],row,column);
     //Function to find out the anticlockwise rotated matrix
-    findAntiClockwiseMatrix(&matrix[0][0],&aclockwise[0][0],row,column);  
+    findAntiClockwiseMatrix(&matrix[0][0],&aclockwise[0][0],row,column);
 
     printf("\nMatrix rotated by 90 degree clockwise: \n");
     printMatrix(&clockwise[0][0],column,row);
