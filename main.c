@@ -174,8 +174,18 @@ void main()
   }
   case 10:
   {
-    int A[] = {11, 12, 15,16, 14, 19, 20, 28, 39, 34, 32, 10};
-    count(A);
+    int *A, i;
+    A = (int *) malloc (sizeof(int));
+    char ch;
+    do
+    {
+        printf("Enter the data: ");
+        scanf("%d", A+i);
+        i++;
+        printf("Do you want to enter more data(y/n): ");
+        scanf(" %ch", &ch);
+    }while(ch == 'y');
+    count(i);
     break;
   }
   case 11:
