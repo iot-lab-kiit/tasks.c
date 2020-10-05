@@ -142,7 +142,7 @@ void main()
     printf("\nEnter size of the array");
     scanf("%d", &n);
     printf("Enter the elements :");
-    for (int i = 0; i <= n; i++)
+    for (int i = 0; i < n; i++)
       scanf("%d", &a[i]);
     Sort_ele(n, a);
     break;
