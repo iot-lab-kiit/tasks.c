@@ -458,7 +458,29 @@ void main()
   }
   case 30:
   {
-    break;
+      int i, j, row, column;
+      printf("\nEnter the number of rows: ");
+      scanf("%d", &row);
+      printf("Enter the number of columns: ");
+      scanf("%d", &column);
+      int matrix[row][column];
+      printf("Enter values into the matrix:\n");
+      for(i=0; i<row; i++) {
+	  for(j=0; j<column; j++) {
+	      printf("matrix[%d][%d] : ", i+1, j+1);
+	      scanf("%d", &matrix[i][j]);
+	  }
+      }
+      printf("\nOriginal Matrix:\n");
+      for(i=0; i<row; i++) {
+	  for(j=0; j<column; j++) {
+	      printf("%d ", matrix[i][j]);
+	  }
+	  printf("\n");
+      }
+      printf("\n");
+      print_matrix_aspiral(&matrix[0][0], row, column);
+      break;
   }
   case 31:
     MeanMedian();
