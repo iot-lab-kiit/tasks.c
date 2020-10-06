@@ -1,17 +1,20 @@
 #include<stdio.h>
 
-int sum_array_elements( int arr[], int n ) {
+int sum_elements( int n,int a[]) {
     
-   if (n < 0) {
-     
-     return 0;
-   }
+int i,sum=0;
     
-    else{
-     
-     return (arr[n] + sum_array_elements(arr, n-1));
+    int *p;
+     p=a;       /*Pointer p containing the starting addres of the array a. */
+    
+    for(i=0; i<n; i++)
+        
+    {
+        
+        sum=sum+*p;
+        
+        p++;
     }
-}
-
+    
     printf("Sum of elements of array is %d", sum);
 }
