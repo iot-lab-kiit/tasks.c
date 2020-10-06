@@ -367,24 +367,23 @@ void main()
   }
   case 24:
   {
-    int i, n;
-    int *a;
-    printf("Enter the no. of elements : ");
-    scanf("%d", &n);
-    a = (int *)calloc(n, sizeof(int));
+    int *a, n = 0;
+    char ch;
+    a = (int *)malloc(sizeof(int));
     if (a == NULL)
     {
       printf("No memory allocated");
       exit(0);
     }
-    printf("\n");
-    printf("Enter the numbers : ");
-    for (i = 0; i < n; ++i)
+    do
     {
-      scanf("%d", a + i);
-    }
+        printf("Enter the number : ");
+        scanf("%d", a+n);
+        n++;
+        printf("Do you want to enter more element(y/n): ");
+        scanf(" %ch", &ch);
+    }while(ch == 'y');
     Largest(a, n);
-    //return 0;
     break;
   }
   case 25:
