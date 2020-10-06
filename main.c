@@ -142,7 +142,7 @@ void main()
     printf("\nEnter size of the array");
     scanf("%d", &n);
     printf("Enter the elements :");
-    for (int i = 0; i <= n; i++)
+    for (int i = 0; i < n; i++)
       scanf("%d", &a[i]);
     Sort_ele(n, a);
     break;
@@ -173,18 +173,22 @@ void main()
   }
   case 10:
   {
-    int n;
-    printf("enter the size of the array");
-    scanf ("%d",&n);
-    int a[n];
-    for (int i = 0; i < n; i++)
+
+    int *A, i=0;
+    A = (int *) malloc (sizeof(int));
+    char ch;
+    do
     {
-      scanf("%d", &a[i]);
-    }
-    int sizeofarray=size(a);
-    printf("no of elements in the array is    %d",countelements(a,sizeofarray));
+        printf("Enter the data: ");
+        scanf("%d", (A+i));
+        i++;
+        printf("Do you want to enter more data(y/n): ");
+        scanf(" %ch", &ch);
+    }while(ch == 'y');
+    count(i);
+
     break;
-    
+
   }
   case 11:
   {
@@ -201,12 +205,11 @@ void main()
   case 12:
   {
     char s[1000];
-    int vowels = 0;
-    printf("Enter  the string :- ");
-    gets(s);
-    vowels = countVowels(s);
-    printf("The Number of Vowels in the string :- %d\nThe Number of Consonants in the string :- %d", vowels, abs(vowels - strlen(s)));
-    printf("\n");
+    int count_vowels, count_consonants;
+    printf("Please enter a string: ");
+    scanf("\n%[^\n]%*c", s);
+    count_vowels_and_consonants(s, &count_vowels, &count_consonants);
+    printf("Number of vowels in the string= %d\nNumber of consonants in the string= %d\n", count_vowels, count_consonants);
     break;
   }
   case 13:
@@ -278,7 +281,7 @@ void main()
     scanf("%d", &dividend);
     printf("Enter a value for the divisor: ");
     scanf("%d", &divisor);
-    
+
     quotientandremainder(dividend, divisor);
     break;
   }
@@ -359,7 +362,7 @@ void main()
     printf("::After Swapping::\n");
     printf("a = %d \nb = %d \nc = %d", a, b, c);
     printf("\n");
-    
+
     break;
   }
   case 24:
@@ -426,9 +429,9 @@ void main()
     printf("\nOriginal Matrix:\n");
     printMatrix(&matrix[0][0], row, column);
     //Function to find out the clockwise rotated matrix
-    findClockwiseMatrix(&matrix[0][0],&clockwise[0][0],row,column); 
+    findClockwiseMatrix(&matrix[0][0],&clockwise[0][0],row,column);
     //Function to find out the anticlockwise rotated matrix
-    findAntiClockwiseMatrix(&matrix[0][0],&aclockwise[0][0],row,column);  
+    findAntiClockwiseMatrix(&matrix[0][0],&aclockwise[0][0],row,column);
 
     printf("\nMatrix rotated by 90 degree clockwise: \n");
     printMatrix(&clockwise[0][0],column,row);
@@ -458,7 +461,29 @@ void main()
   }
   case 30:
   {
-    break;
+      int i, j, row, column;
+      printf("\nEnter the number of rows: ");
+      scanf("%d", &row);
+      printf("Enter the number of columns: ");
+      scanf("%d", &column);
+      int matrix[row][column];
+      printf("Enter values into the matrix:\n");
+      for(i=0; i<row; i++) {
+	  for(j=0; j<column; j++) {
+	      printf("matrix[%d][%d] : ", i+1, j+1);
+	      scanf("%d", &matrix[i][j]);
+	  }
+      }
+      printf("\nOriginal Matrix:\n");
+      for(i=0; i<row; i++) {
+	  for(j=0; j<column; j++) {
+	      printf("%d ", matrix[i][j]);
+	  }
+	  printf("\n");
+      }
+      printf("\n");
+      print_matrix_aspiral(&matrix[0][0], row, column);
+      break;
   }
   case 31:
     MeanMedian();

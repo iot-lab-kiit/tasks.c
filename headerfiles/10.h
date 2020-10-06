@@ -1,6 +1,7 @@
 #include <stdio.h>
-#define size(a) sizeof(a)
-int countelements(int a[],int b)
+
+
+void count(int n)
 {
-return (b*2/sizeof(a));
+    printf("The number of elements in the array is: %d\n", n);
 }

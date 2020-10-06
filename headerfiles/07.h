@@ -1,6 +1,7 @@
 #include<stdio.h>
 void Sort_ele(int n, int a[])
 {
+
   for (i = 0; i < (n - 1); i++) 
   {
     pos = i;               /* Finding the minimum element n-1 times and then compare it with the first element of the array. if it is less than first element then swap the current number with the first number of the array. */
@@ -20,5 +21,8 @@ void Sort_ele(int n, int a[])
     
 printf("The numbers arranged in ascending order is given below :\n");
     for(int i=0;i<=n;i++)
-        printf("%d\n",a[i]);
+    {
+      printf("%d",a[i]);
+    }
 }
+  
