@@ -6,7 +6,7 @@
 
 void Sort_ele(int n, int a[])
 {
- int temp;
+ int i,j,temp;
   
      for(i=0; i<n; i++){
        
