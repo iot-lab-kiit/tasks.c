@@ -1,14 +1,23 @@
+//JUST TYPE " GET_SRC_CODE; " (CAPS)  TO USE IT AFTER INCLUDE THIS FILE
+
 #include <stdio.h>
-void printSourceCode() {
-    FILE *file;
-    int ch;
+#define CODE __FILE__
+#define GET_SRC_CODE printOwnCode(CODE);
 
-    file = fopen(__FILE__,"r"); // opens the input file
+void printOwnCode(char *ch)
+{
+    //GETTING THE FILE LOCATION FROM WHERE IT WILL BE CALLED
+    FILE *f = (FILE *)ch;
+    int c;
 
-    do {
-        ch = getc(file);   // this reads the characters 
-        putchar(ch);     // this displays the characters
-    } while(ch != EOF);  // this will loop until EOF is reached
-    
-    fclose(file);
+    //OPEN THE CURRENT FILE IN READ MODE
+    f = fopen(ch, "r");
+
+    while (c != EOF)
+    {
+        c = getc(f);
+        putchar(c);
+    }
+
+    fclose(f);
 }

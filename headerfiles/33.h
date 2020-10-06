@@ -1,19 +1,19 @@
 #include <stdio.h>
-#define CODE __FILE__
-
-void printOwnCode(char *ch)
+#include <stdbool.h>
+void check_prime(int n)
 {
-    FILE *f = (FILE *)ch;
-    int c;
-
-    //OPEN THE CURRENT FILE IN READ MODE
-    f = fopen(ch, "r");
-
-    while (c != EOF)
+    bool flag = 0;
+    for (int i = 2; i <= n / 2; i++)
     {
-        c = getc(f);
-        putchar(c);
+        flag = 0;
+        if (n % i == 0)
+        {
+            flag = 1;
+            break;
+        }
     }
-
-    fclose(f);
+    if (flag == 1)
+        printf("\n not prime \n");
+    else
+        printf("\n prime \n");
 }
