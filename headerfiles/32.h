@@ -1,10 +1,18 @@
 #include<stdio.h>
+void pascal(int row)
+{   
+    int i,sp,j,coe=1,k=0;
+    for(i=1;i<=row;i++,k=0)
+    {
+        for(sp=1;sp<=(row-i);sp++)
+            {printf(" ");}
+        while(k!=2*i-1)
+        {
+            printf("*");
+            ++k;
 
-void Swap(int *x,int *y)
-{
-  int temp;
-   temp = *x;
-   *x = *y;
-   *y = temp;
-  printf("After Swapping\nx = %d\ny = %d\n", *x, *y);
+        }
+        printf("\n");
+    }
+    return 0;
 }

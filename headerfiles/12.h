@@ -1,19 +1,23 @@
-#include<stdio.h>
-#include<string.h>
-int countVowels(char *ptr){
-    int vowel_count = 0;
- 	while(*ptr)
-    {
-    	if( (*ptr>=65 && *ptr<=90) || (*ptr>=97 && *ptr<=122))
-    	{
+void count_vowels_and_consonants(char *array, int *vowel, int *consonant){
+ 	*vowel= 0;
+	*consonant= 0;
 
-            if(*ptr=='a'|| *ptr=='e'||*ptr=='i'||*ptr=='o'||*ptr=='u'||*ptr=='A'||*ptr=='E'||*ptr=='I'||*ptr=='O' ||*ptr=='U')
-		      vowel_count++;
-        }
-        ptr++;
+	for(; *array; array++){
+    		if((*array>=65 && *array<=90) || (*array>=97 && *array<=122))
+			switch(*array){
+				case 'a':
+				case 'e':
+				case 'i':
+				case 'o':
+				case 'u':
+				case 'A':
+				case 'E':
+				case 'I':
+				case 'O':
+				case 'U':
+						*vowel+= 1;
+						break;
+				default:	*consonant+= 1;
+			}
  	}
-    return vowel_count;
 }
-
-    
-    

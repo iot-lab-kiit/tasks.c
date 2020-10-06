@@ -43,8 +43,8 @@ void main()
   printf("11. Program to find the largest of three numbers using Pointers\n12. Program to count vowels and consonants in a String using pointer\n13. Program to print String using Pointer\n14. Program to swap two numbers using pointers\n15. Program to create initialize and access a pointer variable\n");
   printf("16. Find the value of nPr for given value of n & r\n17. Find the value of nCr for given value of n & r\n18. Program to multiply two floating numbers\n19. Program to find out Quotient and Remainder\n20. Program to find average of two numbers\n");
   printf("21. Program to Add Two Matrices Using Multi-dimensional Arrays\n22. Program to Multiply Two Matrices Using Multi-dimensional Arrays\n23. Program Swap Numbers in Cyclic Order Using Call by Reference\n24. Program to Find Largest Number Using Dynamic Memory Allocation\n25. Program to Sort Elements in Lexicographical Order (Dictionary Order)\n");
-  printf("26. Program to Calculate Difference Between Two Time Periods\n27. Program to Display its own Source Code as Output\n28. Matrix rotation by 90 degrees clockwise and anticlockwise\n29. Saddle point coordinates of a given matrix\n30. Matrix printing in aspiral form\n31.Mean and Median of an unsorted array\n32.Swap using pointer\n33.Check Prime\n");
-  printf("Select your program number from above: ");
+  printf("26. Program to Calculate Difference Between Two Time Periods\n27. Program to Display its own Source Code as Output\n28. Matrix rotation by 90 degrees clockwise and anticlockwise\n29. Saddle point coordinates of a given matrix\n30. Matrix printing in aspiral form\n31. Mean and Median of an unsorted array\n32. Print Pascal's triangle\n33.Check Prime");
+  printf("\nSelect your program number from above: ");
   scanf("%d", &ch);
   switch (ch)
   {
@@ -84,39 +84,32 @@ void main()
   case 3:
   {
 
-    char str[30][40], temp[30];
+    char str[100];
 
-    int num = 0;
+    printf("Enter the string: ");
 
-    printf("Input number of strings: ");
+    scanf("%s", str);
 
-    scanf("%d", &num);
-
+    int n=strlen(str);
     getchar();
-
-    printf("Please Input %d strings :\n", num);
-
-    for (int loop = 0; loop < num; loop++)
-
-      gets(str[loop]);
+    for(int loop=0;loop<n;loop++)
+    gets(str[loop]);
 
     //Call the StringSort function in header 03.h
 
-    StringSort(str, num);
+    StringSort(str, n);
 
     break;
   }
 
   case 4:
   {
-    char input_str[50];
+    char input_str[100];
     int length;
-    printf("\n Enter any string\n");
-    gets(input_str);
+    printf("\nEnter any string\n");
+    scanf("\n%[^\n]%n", input_str, &length);
     puts(input_str);
-    length = length_of_string(input_str);
-    printf("\n The length of the input string is  : %d\n", length);
-
+    printf("\nThe length of the input string is  : %d\n", length-1);
     break;
   }
   case 5:
@@ -145,7 +138,7 @@ void main()
     printf("\nEnter size of the array");
     scanf("%d", &n);
     printf("Enter the elements :");
-    for (int i = 0; i <= n; i++)
+    for (int i = 0; i < n; i++)
       scanf("%d", &a[i]);
     Sort_ele(n, a);
     break;
@@ -154,11 +147,11 @@ void main()
   {
     int a[100], n, i;
     printf("Enter the size of the array: ");
-    scanf("%d", &n);
-    printf("Enter %d elements :", n);
-    for (i = 0; i < n; i++)
-      scanf("%d", &a[i]);
-    largest(a, n);
+    scanf("%d",&n);
+    printf("Enter %d elements :",n);
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    printf("%d",largest(a,n));
     break;
   }
   case 9:
@@ -176,7 +169,22 @@ void main()
   }
   case 10:
   {
+
+    int *A, i=0;
+    A = (int *) malloc (sizeof(int));
+    char ch;
+    do
+    {
+        printf("Enter the data: ");
+        scanf("%d", (A+i));
+        i++;
+        printf("Do you want to enter more data(y/n): ");
+        scanf(" %ch", &ch);
+    }while(ch == 'y');
+    count(i);
+
     break;
+
   }
   case 11:
   {
@@ -193,12 +201,11 @@ void main()
   case 12:
   {
     char s[1000];
-    int vowels = 0;
-    printf("Enter  the string :- ");
-    gets(s);
-    vowels = countVowels(s);
-    printf("The Number of Vowels in the string :- %d\nThe Number of Consonants in the string :- %d", vowels, abs(vowels - strlen(s)));
-    printf("\n");
+    int count_vowels, count_consonants;
+    printf("Please enter a string: ");
+    scanf("\n%[^\n]%*c", s);
+    count_vowels_and_consonants(s, &count_vowels, &count_consonants);
+    printf("Number of vowels in the string= %d\nNumber of consonants in the string= %d\n", count_vowels, count_consonants);
     break;
   }
   case 13:
@@ -228,6 +235,7 @@ void main()
   }
   case 15:
   {
+    actionsonpointer();
     break;
   }
   case 16:
@@ -242,11 +250,10 @@ void main()
   }
   case 17:
   {
-    int n, r, nCr;
-    printf("Enter the value for n and r : ");
+    int n, r;
+    printf("Enter the value for n and r: ");
     scanf("%d%d", &n, &r);
-    nCr = fact(n) / (fact(r) * fact(n - r));
-    printf("\nThe value of nCr is: %d", nCr);
+    printf("The value of %dC%d is: %d\n", n, r, combination(n, r));
     break;
   }
   case 18:
@@ -264,17 +271,14 @@ void main()
   }
   case 19:
   {
-    int num1, num2;
-    printf("Enter value of num1: ");
-    scanf("%d", &num1);
-    printf("Enter value of num2: ");
-    scanf("%d", &num2);
-    //displaying numbers entered by user
-    printf("Before Swapping: num1 is: %d, num2 is: %d\n", num1, num2);
-    //calling the user defined function findAverage
-    double average = findAverage(num1, num2);
-    //displaying the average
-    printf("Average of %d and %d is %lf\n", num1, num2, average);
+    int dividend, divisor, quotient, remainder;
+
+    printf("Enter a value for the dividend: ");
+    scanf("%d", &dividend);
+    printf("Enter a value for the divisor: ");
+    scanf("%d", &divisor);
+
+    quotientandremainder(dividend, divisor);
     break;
   }
   case 20:
@@ -406,27 +410,30 @@ void main()
   }
   case 27:
   {
+    printSourceCode();
     break;
   }
   case 28:
   {
-
-    int matrix[10][10], clockwise[10][10], aclockwise[10][10], row, column;
-
-    printf("\nEnter the row and column values: ");
-    scanf("%d %d", &row, &column);
-
-    inputMatrix(matrix, row, column);
+   int row, column;
+    printf("\nEnter the number of rows: ");
+    scanf("%d", &row);
+    printf("\nEnter the number of column: ");
+    scanf("%d", &column);
+    int matrix[row][column], clockwise[column][row], aclockwise[column][row];
+    inputMatrix(&matrix[0][0],row,column);
+    printf("\nOriginal Matrix:\n");
+    printMatrix(&matrix[0][0], row, column);
     //Function to find out the clockwise rotated matrix
-    findClockwiseMatrix(matrix, clockwise, row, column);
+    findClockwiseMatrix(&matrix[0][0],&clockwise[0][0],row,column);
     //Function to find out the anticlockwise rotated matrix
-    findAntiClockwiseMatrix(matrix, aclockwise, row, column);
+    findAntiClockwiseMatrix(&matrix[0][0],&aclockwise[0][0],row,column);
 
     printf("\nMatrix rotated by 90 degree clockwise: \n");
-    printMatrix(clockwise, column, row);
+    printMatrix(&clockwise[0][0],column,row);
 
     printf("\nMatrix rotated by 90 degree anticlockwise: \n");
-    printMatrix(aclockwise, column, row);
+    printMatrix(&aclockwise[0][0],column,row);
     break;
   }
   case 29:
@@ -450,28 +457,49 @@ void main()
   }
   case 30:
   {
-    break;
+      int i, j, row, column;
+      printf("\nEnter the number of rows: ");
+      scanf("%d", &row);
+      printf("Enter the number of columns: ");
+      scanf("%d", &column);
+      int matrix[row][column];
+      printf("Enter values into the matrix:\n");
+      for(i=0; i<row; i++) {
+	  for(j=0; j<column; j++) {
+	      printf("matrix[%d][%d] : ", i+1, j+1);
+	      scanf("%d", &matrix[i][j]);
+	  }
+      }
+      printf("\nOriginal Matrix:\n");
+      for(i=0; i<row; i++) {
+	  for(j=0; j<column; j++) {
+	      printf("%d ", matrix[i][j]);
+	  }
+	  printf("\n");
+      }
+      printf("\n");
+      print_matrix_aspiral(&matrix[0][0], row, column);
+      break;
   }
   case 31:
     MeanMedian();
     break;
-    case 32:
-    {
-      int x, y, *a, *b, temp;
-      printf("Enter the value of x and y\n");
-      scanf("%d%d", &x, &y);
-      printf("Before Swapping\nx = %d\ny = %d\n", x, y);
-      Swap(&x,&y);
-      break;
-    }
-    case 33:
+  case 32:
+  {
+    int p_row;
+    printf("Enter no of rows: ");
+    scanf("%d",&p_row);
+    pascal(p_row);
+    break;
+  }
+ case 33:
     {
       int n;
       printf("\n Enter the number : \n");
       scanf("%d",&n);
       check_prime(n);
       break;
-    }
+   }
   default:
     printf("Invalid Input. Try Again!\n");
     break;
