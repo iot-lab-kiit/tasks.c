@@ -1,9 +1,17 @@
 #include<stdio.h>
 
-void sum_elements(int n, int a[])
-{      int sum = 0;
-    for(int i =0;i<n;i++){
-        sum = sum+a[i];
+int sum_array_elements( int arr[], int n ) {
+    
+   if (n < 0) {
+     
+     return 0;
+   }
+    
+    else{
+     
+     return (arr[n] + sum_array_elements(arr, n-1));
     }
+}
+
     printf("Sum of elements of array is %d", sum);
 }
