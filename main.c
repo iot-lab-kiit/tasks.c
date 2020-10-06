@@ -83,25 +83,20 @@ void main()
   case 3:
   {
 
-    char str[30][40], temp[30];
+    char str[100];
 
-    int num = 0;
+    printf("Enter the string: ");
 
-    printf("Input number of strings: ");
+    scanf("%s", str);
 
-    scanf("%d", &num);
-
+    int n=strlen(str);
     getchar();
-
-    printf("Please Input %d strings :\n", num);
-
-    for (int loop = 0; loop < num; loop++)
-
-      gets(str[loop]);
+    for(int loop=0;loop<n;loop++)
+    gets(str[loop]);
 
     //Call the StringSort function in header 03.h
 
-    StringSort(str, num);
+    StringSort(str, n);
 
     break;
   }
