@@ -1,12 +1,5 @@
 #include <stdio.h>
 #define CODE __FILE__
-// FILE *fp;
-
-// void getFile(FILE *fp)
-// {
-//     // fp = (FILE *)f;
-//     fp = f;
-// }
 
 void printOwnCode(char *ch)
 {
