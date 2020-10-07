@@ -1,40 +1,38 @@
 #include <stdio.h>
 #include <string.h>
 
-//the function does not return any values. Hence, void.
-void StringSort(char str[30][40], int num) {
+/*This function takes the array of strings and number of strings as input
+ *It does not return any values, only sorts and prints the entered strings in alphabetic order
+ */
+void StringSort(char str[100][100], int n)
+{
 
-	char temp[30];
+	char temp[100];
+	int i, j;
 
-       //Logic for sorting array of strings
+	//Sorting the array of strings using bubble sort
+	
+	int flag = -1;	//Used to exit the loop early if the array is sorted before n iterations
+	for (i = 0; i<n && flag!=0; i++)			
+	{ 
+		flag = 0;	//Reset flag for each iteration
+		for (j = 0; j < n-i-1; j++)
+		{ 
 
-     	  for (int outer = 0; outer < num; outer++) {			// Outer for Outer Loop
+			if ( strcmp(str[j], str[j+1]) > 0 )
+			{
+				//swap str[i] and str[j]
+				strcpy(temp, str[j]);
+				strcpy(str[j], str[j+1]);
+				strcpy(str[j+1], temp);
 
-		  for (int inner = outer + 1; inner < num; inner++) {	//Inner for Inner Loop
+				flag = 1; 
+			}
+		}
+	}
 
-	      		  if (strcmp(str[outer], str[inner]) > 0) {
-
-				  strcpy(temp, str[outer]);
-
-		  		  strcpy(str[outer], str[inner]);
-
-		  		  strcpy(str[inner], temp);
-
-			  }
-
-		  }
-
-	  }
-
-       	  // print the strings after sort
-
-	  printf("The Strings after Sorting:\n");
-
-	  for(int loop = 0; loop < num; loop++) {
-
-		  printf("%s\n",str[loop]);
-
-	  }
-
+	//Print the strings after sorting
+	printf("\n\nThe Strings after Sorting:\n");
+	for (i = 0; i < n; i++)
+		printf("%s \n", str[i]);
 }
-
