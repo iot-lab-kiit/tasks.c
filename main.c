@@ -278,7 +278,15 @@ void main()
     printf("Enter a value for the divisor: ");
     scanf("%d", &divisor);
 
-    quotientandremainder(dividend, divisor);
+    //computing quotient
+    quotient = dividend/divisor;
+
+    //computing remainder
+    remainder = dividend % divisor;
+
+    printf("Quotient = %d\n", quotient);
+    printf("Remainder = %d", remainder);
+
     break;
   }
   case 20:
