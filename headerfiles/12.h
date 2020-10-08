@@ -1,23 +1,21 @@
+
+char LUT[27] = {1, 0, 0, 0, 1, 0 , 0,
+				0, 1, 0, 0, 0, 0, 0, 
+				1, 0, 0, 0, 0, 0, 1,
+				0, 0, 0, 0, 0};	
+
 void count_vowels_and_consonants(char *array, int *vowel, int *consonant){
  	*vowel= 0;
 	*consonant= 0;
+	
+	while(*array){
+		*array |= 0x20;
 
-	for(; *array; array++){
-    		if((*array>=65 && *array<=90) || (*array>=97 && *array<=122))
-			switch(*array){
-				case 'a':
-				case 'e':
-				case 'i':
-				case 'o':
-				case 'u':
-				case 'A':
-				case 'E':
-				case 'I':
-				case 'O':
-				case 'U':
-						*vowel+= 1;
-						break;
-				default:	*consonant+= 1;
-			}
- 	}
+		if(*array >= 97 && *array <= 122){
+			int temp = LUT[*array-97];; 
+			*vowel += temp;
+			*consonant += !temp;
+		}
+		array++;
+	}
 }

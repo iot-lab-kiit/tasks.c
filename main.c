@@ -203,7 +203,7 @@ void main()
     char s[1000];
     int count_vowels, count_consonants;
     printf("Please enter a string: ");
-    scanf("\n%[^\n]%*c", s);
+    scanf("\n%[^\n]", s);
     count_vowels_and_consonants(s, &count_vowels, &count_consonants);
     printf("Number of vowels in the string= %d\nNumber of consonants in the string= %d\n", count_vowels, count_consonants);
     break;
