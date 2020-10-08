@@ -1,15 +1,19 @@
 #include <stdio.h>
 
-int fact(int n){
-	if(n<=1)	return 1;
-	return n*fact(n-1);
+/*finding the factorial */
+
+/*for the value 0 and 1 we will return 1. because factorial of 0 and 1 is 1. */
+
+int factorial(int n) {
+	
+   return (n == 1 || n == 0) ? 1 : factorial(n - 1) * n;
 }
 
-int perm(int n, int r){
-	if(!r)	return 1;			//if(r==0){ return 1;}
-        return n*perm(n-1, r-1);		//this is equivalent to return(n * (n-1) * (n-2) * ..... * (n-r+1))
-}
+/*finding the value of nCr by formulla, n!/(n-r)! * r!. */
 
-int combination(int n, int r){
-	return (perm(n, r)/fact(r));
-}   
+int combination(int n, int r) {
+	
+   return (factorial(n)/factorial(n-r)/factorial(r));
+  
+}
+  
