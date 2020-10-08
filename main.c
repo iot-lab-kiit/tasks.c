@@ -79,24 +79,21 @@ void main()
     break;
   }
 
-    //sort a set of string in ascending alphabetical order
-
-  case 3:
+   
+  case 3:      //sort a set of strings in ascending alphabetical order
   {
 
-    char str[100];
+    char str[100][100]; //store the strings
+    int n;  //number of strings entered
+    
+    printf("\n\nEnter the number of strings: ");
+    scanf("%d", &n);
+    
+    printf("Enter %d strings: \n", n);
+    for(int i = 0; i < n; i++)
+      scanf(" %s", &str[i]);
 
-    printf("Enter the string: ");
-
-    scanf("%s", str);
-
-    int n=strlen(str);
-    getchar();
-    for(int loop=0;loop<n;loop++)
-    gets(str[loop]);
-
-    //Call the StringSort function in header 03.h
-
+    //Call StringSort function in header 03.h to sort and print the strings
     StringSort(str, n);
 
     break;
