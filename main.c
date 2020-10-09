@@ -79,16 +79,16 @@ void main()
     break;
   }
 
-   
+
   case 3:      //sort a set of strings in ascending alphabetical order
   {
 
     char str[100][100]; //store the strings
     int n;  //number of strings entered
-    
+
     printf("\n\nEnter the number of strings: ");
     scanf("%d", &n);
-    
+
     printf("Enter %d strings: \n", n);
     for(int i = 0; i < n; i++)
       scanf(" %s", &str[i]);
@@ -266,14 +266,19 @@ void main()
   }
   case 19:
   {
-    int dividend, divisor, quotient, remainder;
+    int num1, num2, quot, rem;
+    printf("Enter dividend:");
+    scanf("%d", &num1);
+    printf("Enter divisor:");
+    scanf("%d", &num2);
 
-    printf("Enter a value for the dividend: ");
-    scanf("%d", &dividend);
-    printf("Enter a value for the divisor: ");
-    scanf("%d", &divisor);
+    //calling function quotient()
+    quot= quotient(num1, num2);
 
-    quotientandremainder(dividend, divisor);
+    //calling function remainder()
+    rem = remainder(num1, num2);
+    printf("Quotient is: %d\n",quot);
+    printf("Remainder is : %d",rem);
     break;
   }
   case 20:
