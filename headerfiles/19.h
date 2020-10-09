@@ -1,11 +1,13 @@
 #include<stdio.h>
+//function to compute quotient
+int quotient(int a, intb)
+{
+    return a/b;
+}
 
-void quotientandremainder(int dividend, int divisor) {
-    int quotient, remainder;
+//function to compute remainder
+int remainder(int a, int b)
+{
+    return a%b;
 
-    quotient = dividend / divisor; // finds the quotient
-    remainder = dividend % divisor; // finds the remainder
-    
-    printf("The quotient is %d\n", quotient);
-    printf("The remainder is %d\n", remainder);
 }

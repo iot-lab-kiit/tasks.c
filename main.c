@@ -271,15 +271,19 @@ void main()
   }
   case 19:
   {
-    int dividend, divisor, quotient, remainder;
+    int num1, num2, quot, rem;
+    printf("Enter dividend:");
+    scanf("%d", &num1);
+    printf("Enter divisor:");
+    scanf("%d", &num2);
 
-    printf("Enter a value for the dividend: ");
-    scanf("%d", &dividend);
-    printf("Enter a value for the divisor: ");
-    scanf("%d", &divisor);
+    //calling function quotient()
+    quot= quotient(num1, num2);
 
-    quotientandremainder(dividend, divisor);
-    break;
+    //calling function remainder()
+    rem = remainder(num1, num2);
+    printf("Quotient is: %d\n",quot);
+    printf("Remainder is : %d",rem);
   }
   case 20:
   {
