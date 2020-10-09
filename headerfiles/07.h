@@ -1,33 +1,43 @@
-#include<stdio.h>
-
- /* Finding the minimum element n-1 times and then compare it with the first element of the array. if it is less than first element then swap the current number with the first number of the array. */
-      
- /*Selection sort algorithm */
-
-void Sort_ele(int n, int a[])
+/*
+ * C program to sort N numbers in ascending order using Bubble sort
+ * and print both the given and the sorted array
+ */
+#include <stdio.h>
+#define MAXSIZE 10
+ 
+void main()
 {
- int i,j,temp;
-  
-     for(i=0; i<n; i++){
-       
-      for(j=i+1; j<n ;j++){
-        
-         if(a[i]>a[j]){
-           
-            temp=a[i];
-            a[i]=a[j];
-            a[j]=temp;
-           
-         }
-      }
-   }
-  
-  
-    
-printf("The numbers arranged in ascending order is given below :\n");
-    for(int i=0;i<=n;i++)
+    int array[MAXSIZE];
+    int i, j, num, temp;
+ 
+    printf("Enter the value of num \n");
+    scanf("%d", &num);
+    printf("Enter the elements one by one \n");
+    for (i = 0; i < num; i++)
     {
-      printf("%d",a[i]);
+        scanf("%d", &array[i]);
+    }
+    printf("Input array is \n");
+    for (i = 0; i < num; i++)
+    {
+        printf("%d\n", array[i]);
+    }
+    /*   Bubble sorting begins */
+    for (i = 0; i < num; i++)
+    {
+        for (j = 0; j < (num - i - 1); j++)
+        {
+            if (array[j] > array[j + 1])
+            {
+                temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
+        }
+    }
+    printf("Sorted array is...\n");
+    for (i = 0; i < num; i++)
+    {
+        printf("%d\n", array[i]);
     }
 }
-  
