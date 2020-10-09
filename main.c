@@ -234,7 +234,6 @@ void main()
     break;
   }
   case 16:
-  int main()
 {
     int n, r;
     printf("Enter n: ");
@@ -245,7 +244,7 @@ void main()
 
     printf("%dP%d is %d", n, r, nPr(n, r));
 
-    return 0;
+    break;
 }
   case 17:
   {
