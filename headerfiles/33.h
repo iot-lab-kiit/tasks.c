@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include<math.h>
+
 void check_prime(int n)
 {
     bool flag = 0;
-    for (int i = 2; i <= sqrt(n); i++)
+    for (int i = 2; i*i <= n; i++)
     {
         flag = 0;
         if (n % i == 0)
