@@ -1,33 +1,28 @@
 #include<stdio.h>
 
  /* Finding the minimum element n-1 times and then compare it with the first element of the array. if it is less than first element then swap the current number with the first number of the array. */
-      
+
  /*Selection sort algorithm */
 
-void Sort_ele(int n, int a[])
+
+void Sort_ele(int n,int arr[])
 {
- int i,j,temp;
-  
-     for(i=0; i<n; i++){
-       
-      for(j=i+1; j<n ;j++){
-        
-         if(a[i]>a[j]){
-           
-            temp=a[i];
-            a[i]=a[j];
-            a[j]=temp;
-           
-         }
-      }
-   }
-  
-  
-    
-printf("The numbers arranged in ascending order is given below :\n");
-    for(int i=0;i<=n;i++)
+    int i, j, min_idx;
+    for (i = 0; i < n-1; i++)
     {
-      printf("%d",a[i]);
+        min_idx = i;
+        for (j = i+1; j < n; j++)
+          if (arr[j] < arr[min_idx])
+            min_idx = j;
+         int temp = arr[min_idx];
+		 arr[min_idx]=arr[i];
+		 arr[i]= temp;
+    }
+
+
+printf("The numbers arranged in ascending order is given below :\n");
+    for(int i=0;i<n;i++)
+    {
+      printf("%d ",arr[i]);
     }
 }
-  
