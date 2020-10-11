@@ -234,15 +234,18 @@ void main()
     break;
   }
   case 16:
-  {
+{
     int n, r;
-    printf("Enter n:");
+    printf("Enter n: ");
     scanf("%d", &n);
-    printf("Enter r:");
+
+    printf("Enter r: ");
     scanf("%d", &r);
-    printf("%dP%d=%d\n", n, r, permutation(n, r));
+
+    printf("%dP%d is %d", n, r, nPr(n, r));
+
     break;
-  }
+}
   case 17:
   {
     int n, r;
