@@ -14,5 +14,4 @@ int main()
     calculateSize = sizeof(ar) / sizeof(ar[0]);        // it means dividing the size of  whole array by size of single array element
     printf("The size of array is : %d", calculateSize);
     return 0;
-    
 }
