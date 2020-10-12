@@ -248,22 +248,17 @@ void main()
 }
   case 17:
 {
-int n,r;
-float nCr;
-printf("Enter value of n in \n");
-scanf("%d",&n);
-printf("Enter value of r in \n");
-scanf("%d",&r);
-if(n>=r&&n>=0&&r>=0)
-{
-   nCr=(float)factorial(n)/(factorial(r)*factorial(n-r));
-   printf("Value of %dC%d=%f\n",n,r,nCr);
-}
-else
-{
- printf("Invalid Entry\n");
-}
-break;
+   int n, r;
+   long ncr;
+
+   printf("Enter the value of n and r\n");
+   scanf("%d%d",&n,&r);
+
+   ncr = find_ncr(n, r);
+
+   printf("%dC%d = %ld\n", n, r, ncr);
+
+   break;
 }
 
   case 18:

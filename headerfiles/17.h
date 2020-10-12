@@ -1,13 +1,26 @@
 #include<stdio.h>
-int factorial(int);
 
-int factorial(int num)
+long factorial(int);
+long find_ncr(int, int);
+
+long find_ncr(int n, int r)
 {
- int i,fact=1;
- for(i=1;i<=num;i++)
- {
-  fact=fact*i;
- }
+   long result;
 
- return(fact);
+   result = factorial(n)/(factorial(r)*factorial(n-r));
+
+   return result;
 }
+
+long factorial(int n)
+{
+   int c;
+   long result = 1;
+
+   for( c = 1 ; c <= n ; c++ )
+      result = result*c;
+
+   return ( result );
+}
+
+
