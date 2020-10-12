@@ -1,19 +1,13 @@
-#include <stdio.h>
+#include<stdio.h>
+int factorial(int);
 
-/*finding the factorial */
+int factorial(int num)
+{
+ int i,fact=1;
+ for(i=1;i<=num;i++)
+ {
+  fact=fact*i;
+ }
 
-/*for the value 0 and 1 we will return 1. because factorial of 0 and 1 is 1. */
-
-int factorial(int n) {
-	
-   return (n == 1 || n == 0) ? 1 : factorial(n - 1) * n;
+ return(fact);
 }
-
-/*finding the value of nCr by formulla, n!/(n-r)! * r!. */
-
-int combination(int n, int r) {
-	
-   return (factorial(n)/factorial(n-r)/factorial(r));
-  
-}
-  
