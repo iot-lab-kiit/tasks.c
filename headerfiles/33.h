@@ -1,20 +1,45 @@
-#include <stdio.h>
-#include <stdbool.h>
+//prime no through recursion
 
-void check_prime(int n)
+#include<stdio.h>
+
+int checkForPrime(int);
+int i;
+
+int main()
 {
-    bool flag = 0;
-    for (int i = 2; i*i <= n; i++)
+
+    int n1,primeNo;
+
+	printf("\n\n Recursion : Check a number is prime number or not :\n");
+	printf("--------------------------------------------------------\n");
+	
+    printf(" Input any positive number : ");
+    scanf("%d",&n1);
+    
+    i = n1/2;
+
+    primeNo = checkForPrime(n1);//call the function checkForPrime
+
+   if(primeNo==1)
+        printf(" The number %d is a prime number. \n\n",n1);
+   else
+      printf(" The number %d is not a prime number. \nn",n1);
+   return 0;
+}
+
+int checkForPrime(int n1) // recursive function
+{
+    if(i==1)
     {
-        flag = 0;
-        if (n % i == 0)
-        {
-            flag = 1;
-            break;
-        }
+        return 1;
     }
-    if (flag == 1)
-        printf("\n %d is not prime \n",n);
+    else if(n1 %i==0)
+    {
+         return 0;
+    }     
     else
-        printf("\n %d is prime \n",n);
+       {
+         i = i -1; 
+         checkForPrime(n1);//calling the function checkForPrime itself recursively
+      }
 }
