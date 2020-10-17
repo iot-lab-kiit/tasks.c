@@ -261,9 +261,9 @@ void main()
     scanf("%f", &num1);
     printf("Enter value of num2: ");
     scanf("%f", &num2);
-    //calling the user defined function findAverage
+    //calling the user defined function findproduct
     double pruduct = findProduct(num1, num2);
-    //displaying the average
+    //displaying the product
     printf("Product of %f and %f is %lf\n", num1, num2, pruduct);
     break;
   }
@@ -509,7 +509,7 @@ void main()
   }
 
   default:
-    printf("Invalid Input. Try Again!\n");
+    printf("\nInvalid Input. Try Again!\n");
     break;
   }
 }
