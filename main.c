@@ -291,7 +291,7 @@ void main()
     scanf("%d", &n1);
     printf("Enter second number: ");
     scanf("%d", &n2);
-    avg(n1, n2);
+    printf("Average of both the numbers is : %d",avg(n1, n2));
     break;
   }
   case 21:
