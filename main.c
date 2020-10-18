@@ -119,15 +119,18 @@ void main()
     break;
   }
   case 6:
-  {
-    char f[100];
-    printf("Enter a string :- ");
-    gets(f);
-    printf("The reverse of the string is :- ");
-    rev(f, 0, strlen(f) - 1);
-    printf("%s\n", f);
+ {
+    int i, j, k;
+    char str[100];
+    char *rev;
+    printf("Enter the string:\t");
+    scanf("%s", str);
+    printf("The original string is: %s\n", str);
+    rev = reverse(str);
+    printf("The reversed string is: %s\n", rev);
+    getch();
     break;
-  }
+}
   case 7:
   {
     int a[100], n;
