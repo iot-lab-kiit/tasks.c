@@ -1,69 +1,24 @@
 #include <stdio.h>
-struct TIME {
-   int seconds;
-   int minutes;
-   int hours;
-};
+#include <string.h>
+void dictionary_i(char str[][50],int n) {
 
-void differenceBetweenTimePeriod(struct TIME t1,
-                                 struct TIME t2,
-                                 struct TIME *diff);
+    char temp[50];
+   // storing strings in the lexicographical order
+   for (int i = 0; i < n-1; ++i) {
+      for (int j = i + 1; j < n; ++j) {
 
-int main() {
-   struct TIME startTime, stopTime, diff;
-
-   printf("Enter the start time. \n");
-   printf("Enter hours, minutes and seconds: ");
-   scanf("%d %d %d", &startTime.hours,
-         &startTime.minutes,
-         &startTime.seconds);
-
-   printf("Enter the stop time. \n");
-   printf("Enter hours, minutes and seconds: ");
-   scanf("%d %d %d", &stopTime.hours,
-         &stopTime.minutes,
-         &stopTime.seconds);
-
-   // Difference between start and stop time
-   differenceBetweenTimePeriod(startTime, stopTime, &diff);
-   printf("\nTime Difference: %d:%d:%d - ", startTime.hours,
-          startTime.minutes,
-          startTime.seconds);
-   printf("%d:%d:%d ", stopTime.hours,
-          stopTime.minutes,
-          stopTime.seconds);
-   printf("= %d:%d:%d\n", diff.hours,
-          diff.minutes,
-          diff.seconds);
-   return 0;
-}
-
-// Computes difference between time periods
-void differenceBetweenTimePeriod(struct TIME start,
-                                 struct TIME stop,
-                                 struct TIME *diff) {
-   while (stop.seconds > start.seconds) {
-      --start.minutes;
-      start.seconds += 60;
+         // swapping strings if they are not in the lexicographical order
+         if (strcmp(str[i], str[j]) > 0) {
+            strcpy(temp, str[i]);
+            strcpy(str[i], str[j]);
+            strcpy(str[j], temp);
+         }
+      }
    }
-   diff->seconds = start.seconds - stop.seconds;
-   while (stop.minutes > start.minutes) {
-      --start.hours;
-      start.minutes += 60;
+
+   printf("\nIn the lexicographical order: \n");
+   for (int i = 0; i < 5; ++i) {
+      
+        puts(str[i]);
    }
-   diff->minutes = start.minutes - stop.minutes;
-   diff->hours = start.hours - stop.hours;
 }
-
-
-OUTPUT:-
-Enter the start time.
-Enter hours, minutes and seconds: 12
-34
-55
-Enter the stop time.
-Enter hours, minutes and seconds: 8
-12
-15
-
-Time Difference: 12:34:55 - 8:12:15 = 4:22:40
