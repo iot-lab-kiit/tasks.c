@@ -1,19 +1,23 @@
 #include <stdio.h>
+long factorial(int);
+long find_ncr(int, int);
 
-/*finding the factorial */
+long find_ncr(int n, int r)
+{
+   long result;
 
-/*for the value 0 and 1 we will return 1. because factorial of 0 and 1 is 1. */
+   result = factorial(n)/(factorial(r)*factorial(n-r));
 
-int factorial(int n) {
-	
-   return (n == 1 || n == 0) ? 1 : factorial(n - 1) * n;
+   return result;
 }
 
-/*finding the value of nCr by formulla, n!/(n-r)! * r!. */
+long factorial(int n)
+{
+   int c;
+   long result = 1;
 
-int combination(int n, int r) {
-	
-   return (factorial(n)/factorial(n-r)/factorial(r));
-  
+   for (c = 1; c <= n; c++)
+      result = result*c;
+
+   return result;
 }
-  
