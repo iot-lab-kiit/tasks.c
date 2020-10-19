@@ -247,13 +247,20 @@ void main()
     break;
 }
   case 17:
-  {
+{
     int n, r;
-    printf("Enter the value for n and r: ");
-    scanf("%d%d", &n, &r);
-    printf("The value of %dC%d is: %d\n", n, r, combination(n, r));
-    break;
-  }
+   long ncr;
+
+   printf("Enter the value of n and r\n");
+   scanf("%d%d",&n,&r);
+
+   ncr = find_ncr(n, r);
+
+   printf("%dC%d = %ld\n", n, r, ncr);
+
+   break;
+
+}
   case 18:
   {
     float num1, num2;
