@@ -38,76 +38,98 @@ void main()
 {
   int ch;
   printf("List of Programs:\n00. Program to find a sum of two numbers(Example)\n");
-  printf("01. Count distinct elements of an array\n02. Program to convert string from lower case to upper case\n03. Sort a set of strings in ascending alphabetical order\n04. Find length of a string without using strlen()\n05. String concatenation without using strcat\n06. Reverse a String using recursion\n");
-  printf("07. Program to sort array in ascending order\n08. Find largest element of given array\n09. Program to find sum of array elements\n10. Program to find number of elements in an array\n");
-  printf("11. Program to find the largest of three numbers using Pointers\n12. Program to count vowels and consonants in a String using pointer\n13. Program to print String using Pointer\n14. Program to swap two numbers using pointers\n15. Program to create initialize and access a pointer variable\n");
-  printf("16. Find the value of nPr for given value of n & r\n17. Find the value of nCr for given value of n & r\n18. Program to multiply two floating numbers\n19. Program to find out Quotient and Remainder\n20. Program to find average of two numbers\n");
-  printf("21. Program to Add Two Matrices Using Multi-dimensional Arrays\n22. Program to Multiply Two Matrices Using Multi-dimensional Arrays\n23. Program Swap Numbers in Cyclic Order Using Call by Reference\n24. Program to Find Largest Number Using Dynamic Memory Allocation\n25. Program to Sort Elements in Lexicographical Order (Dictionary Order)\n");
-  printf("26. Program to Calculate Difference Between Two Time Periods\n27. Program to Display its own Source Code as Output\n28. Matrix rotation by 90 degrees clockwise and anticlockwise\n29. Saddle point coordinates of a given matrix\n30. Matrix printing in aspiral form\n31. Mean and Median of an unsorted array\n32. Print Pascal's triangle\n33.Check if a number is Prime");
-  printf("\nSelect your program number from above: ");
+  printf("01. Count distinct elements of an array\n");
+  printf("02. Program to convert string from lower case to upper case\n");
+  printf("03. Sort a set of strings in ascending alphabetical order\n");
+  printf("04. Find length of a string without using strlen()\n");
+  printf("05. String concatenation without using strcat\n");
+  printf("06. Reverse a String using recursion\n");
+  printf("07. Program to sort array in ascending order\n");
+  printf("08. Find largest element of given array\n");
+  printf("09. Program to find sum of array elements\n");
+  printf("10. Program to find number of elements in an array\n");
+  printf("11. Program to find the largest of three numbers using Pointers\n");
+  printf("12. Program to count vowels and consonants in a String using pointer\n");
+  printf("13. Program to print String using Pointer\n");
+  printf("14. Program to swap two numbers using pointers\n");
+  printf("15. Program to create initialize and access a pointer variable\n");
+  printf("16. Find the value of nPr for given value of n & r\n");
+  printf("17. Find the value of nCr for given value of n & r\n");
+  printf("18. Program to multiply two floating numbers\n");
+  printf("19. Program to find out Quotient and Remainder\n");
+  printf("20. Program to find average of two numbers\n");
+  printf("21. Program to Add Two Matrices Using Multi-dimensional Arrays\n");
+  printf("22. Program to Multiply Two Matrices Using Multi-dimensional Arrays\n");
+  printf("23. Program Swap Numbers in Cyclic Order Using Call by Reference\n");
+  printf("24. Program to Find Largest Number Using Dynamic Memory Allocation\n");
+  printf("25. Program to Sort Elements in Lexicographical Order (Dictionary Order)\n");
+  printf("26. Program to Calculate Difference Between Two Time Periods\n");
+  printf("27. Program to Display its own Source Code as Output\n");
+  printf("28. Matrix rotation by 90 degrees clockwise and anticlockwise\n");
+  printf("29. Saddle point coordinates of a given matrix\n");
+  printf("30. Matrix printing in aspiral form\n");
+  printf("31. Mean and Median of an unsorted array\n");
+  printf("32. Print Pascal's triangle\n");
+  printf("33.Check if a number is Prime\n");
+  printf("Select your program number from above : ");
   scanf("%d", &ch);
   switch (ch)
   {
-  case 0:
-  {
-    int x, y;
-    printf("Enter two numbers: ");
-    scanf("%d %d", &x, &y);
-    printf("Sum of %d and %d is %d\n", x, y, sum(x, y));
-    break;
-  }
-  case 1:
-  {
-    int n;
-    printf("\nEnter the size of an array\n");
-    scanf("%d", &n);
-    int A[n];
-    printf("\nEnter the values of an array\n");
-    for (int i = 0; i < n; i++)
+    case 0:
     {
-      scanf("%d", &A[i]);
+      int x, y;
+      printf("Enter two numbers: ");
+      scanf("%d %d", &x, &y);
+      printf("Sum of %d and %d is %d\n", x, y, sum(x, y));
+      break;
     }
-    printf("\nDistinct Elements count: %d\n", Array_count_distinct(A, n));
-    break;
-  }
-  case 2:
-  {
-    char s[100];
-    printf("\nEnter a string : ");
-    scanf("\n%[^\n]%*c", s);
-    toUpper(s);
-    break;
-  }
-
-
-  case 3:      //sort a set of strings in ascending alphabetical order
-  {
-
-    char str[100][100]; //store the strings
-    int n;  //number of strings entered
-
-    printf("\n\nEnter the number of strings: ");
-    scanf("%d", &n);
-
-    printf("Enter %d strings: \n", n);
-    for(int i = 0; i < n; i++)
-      scanf(" %s", &str[i]);
-
-    //Call StringSort function in header 03.h to sort and print the strings
-    StringSort(str, n);
-
-    break;
-  }
-
-  case 4:
-  {
-    char input_str[1000];
-    printf("\nEnter any string:\n");
-    scanf(" %[^\t\n]s", &input_str);
-    int length = string_len(input_str);
-    printf("\nThe length of the input string is  : %d\n", length);
-    break;
-  }
+    case 1:
+    {
+      int n;
+      printf("\nEnter the size of an array\n");
+      scanf("%d", &n);
+      int A[n];
+      printf("\nEnter the values of an array\n");
+      for (int i = 0; i < n; i++)
+      {
+        scanf("%d", &A[i]);
+      }
+      printf("\nDistinct Elements count: %d\n", Array_count_distinct(A, n));
+      break;
+    }
+    case 2:
+    {
+      char s[100];
+      printf("\nEnter a string : ");
+      scanf("\n%[^\n]%*c", s);
+      toUpper(s);
+      break;
+    }
+    case 3:      //sort a set of strings in ascending alphabetical order
+    {
+  
+      char str[100][100]; //store the strings
+      int n;  //number of strings entered
+  
+      printf("\n\nEnter the number of strings: ");
+      scanf("%d", &n);
+  
+      printf("Enter %d strings: \n", n);
+      for(int i = 0; i < n; i++)
+        scanf(" %s", &str[i]);
+        //Call StringSort function in header 03.h to sort and print the strings
+      StringSort(str, n);
+      break;
+    }
+    case 4:
+    {
+      char input_str[1000];
+      printf("\nEnter any string:\n");
+      scanf(" %[^\t\n]s", &input_str);
+      int length = string_len(input_str);
+      printf("\nThe length of the input string is  : %d\n", length);
+      break;
+    }
   case 5:
   {
     char str1[50], str2[50];
