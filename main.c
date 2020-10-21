@@ -283,10 +283,12 @@ void main()
     scanf("%d", &num2);
 
     //calling function quotient()
-    quot= quotient(num1, num2);
+    if(num2 != 0)
+      quot = quotient(num1, num2);
 
     //calling function remainder()
-    rem = remainder(num1, num2);
+    if(num2 != 0)
+      rem = remainder(num1, num2);
     printf("Quotient is: %d\n",quot);
     printf("Remainder is : %d",rem);
     break;

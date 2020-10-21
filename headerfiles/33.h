@@ -13,7 +13,7 @@ void check_prime(int n)
             break;
         }
     }
-    if (flag == 1)
+    if (flag == 1 || n < 2)
         printf("\n %d is not prime \n",n);
     else
         printf("\n %d is prime \n",n);
