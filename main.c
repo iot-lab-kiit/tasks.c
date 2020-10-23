@@ -152,15 +152,18 @@ void main()
   }
   case 9:
   {
-    int n, a[100];
+    int n, a[100],sum=0;
     printf("enter the number of elements\n");
     scanf("%d", &n);
     printf("Enter the elements\n");
     for (int i = 0; i < n; i++)
     {
       scanf("%d", &a[i]);
+      sum+=a[i];
     }
-    sum_elements(n, a);
+    printf("\n Sum :%d",sum);
+   // sum_elements(n, a);
+    
     break;
   }
   case 10:
