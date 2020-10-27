@@ -25,10 +25,10 @@
 **The following problems need solutions as on date 28<sup>th</sup> Sept, 2020**
 
 - Count distinct elements of an array
-- Program to convert string from lower case to upper case
+- Program to convert string from lower case to UPPER case
 - Sort a set of strings in ascending alphabetical order
 - Find length of a string without using strlen()
-- String concatenation without using strcat
+- String concatenation without using strcat()
 - Reverse a String using recursion
 - Program to sort array in ascending order
 - Find largest element of given array
